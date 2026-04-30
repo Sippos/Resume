@@ -198,6 +198,15 @@ p {
   box-shadow: 0 6px 16px rgb(0 0 0 / 0.04);
 }
 
+.card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgb(0 0 0 / 0.12);
+}
+
 /* Tablet and phone layout */
 @media (max-width: 760px) {
   .site-header {
