@@ -4,14 +4,61 @@
   box-sizing: border-box;
 }
 
-body {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-color: #efefef;
-    color: #29213f;
-    line-height: 1.5;
+html {
+  scroll-behavior: smooth;
 }
 
-header {
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: #efefef;
+  color: #29213f;
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+}
+
+a:hover {
+  color: hotpink;
+}
+
+a:focus-visible {
+  outline: 3px solid hotpink;
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+.skip-link {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  transform: translateY(-150%);
+  background: #29213f;
+  color: white;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  z-index: 10;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.site-header,
+main {
+  max-width: 900px;
+  margin-inline: auto;
+  padding-inline: clamp(1rem, 5vw, 4rem);
+}
+
+.site-header {
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
@@ -20,84 +67,136 @@ header {
   padding-bottom: 0.5rem;
 }
 
-header figure {
-    grid-column: 1;
-}
-
-header h1 {
-  grid-column: 2;
-}
-
-header address {
-  grid-column: 3;
-  font-style: normal;
-  text-align: right;
-}
-
-header li + li {
-  margin-top: .4rem;
-}
-
-header ul {
-    list-style: none;
-}
-
-header a {
-    color: inherit;
-    text-decoration: none;
-    font-style: normal;
-}
-
-header a:hover {
-    color: hotpink;
-}
-
-header img {
-    display: block;
-    aspect-ratio: 1;
-    border-radius: 50%;
-    width: 120px;
-    height: 120px;
-    object-fit: cover;
+.profile-image img {
+  display: block;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
 }
 
 h1 {
   text-align: center;
   color: darkslategrey;
-  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-size: clamp(1.6rem, 5vw, 2.5rem);
   line-height: 1.1;
 }
 
-h2 {
-  border-bottom: 1px solid #29213f;
-  padding-bottom: .25rem;
-  margin-bottom: 1rem;
+.contact {
+  font-style: normal;
+  text-align: right;
+}
+
+.contact ul {
+  list-style: none;
+}
+
+.contact li + li {
+  margin-top: 0.4rem;
+}
+
+.contact a {
+  text-decoration: none;
 }
 
 main {
   margin-top: 2rem;
 }
 
-header,
-main {
-  max-width: 900px;
-  margin-inline: auto;
-  padding-inline: 4rem;
+section {
+  margin-top: 2.5rem;
 }
 
-section {
-    margin-top: 2.5rem;
+h2 {
+  border-bottom: 1px solid #29213f;
+  padding-bottom: 0.25rem;
+  margin-bottom: 1rem;
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
+}
+
+h3 {
+  font-size: 1rem;
 }
 
 p {
-    max-width: 80ch;
+  max-width: 80ch;
 }
 
-section li h3, section li p {
-    font-size: .8rem;
-    letter-spacing: 0.5px;
+.entry-list {
+  list-style: none;
 }
 
-section li {
-    margin: .5rem;
+.entry-list li {
+  margin-top: 0.75rem;
+}
+
+.entry-list h3,
+.entry-list p {
+  letter-spacing: 0.3px;
+}
+
+.job-title {
+  text-align: center;
+  color: darkslategrey;
+  margin-top: 0.4rem;
+  font-size: 1rem;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  list-style: none;
+  margin-top: 0.75rem;
+}
+
+.skills-list li {
+  background: white;
+  border: 1px solid #d8d8d8;
+  border-radius: 999px;
+  padding: 0.4rem 0.8rem;
+}
+
+#skills-heading + h3,
+.skills-list + h3 {
+  margin-top: 1.5rem;
+}
+
+/* Tablet and phone layout */
+@media (max-width: 700px) {
+  .site-header {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .profile-image {
+    justify-self: center;
+  }
+
+  .contact {
+    text-align: center;
+  }
+
+  h1 {
+    text-align: center;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 420px) {
+  .profile-image img {
+    width: 96px;
+    height: 96px;
+  }
+
+  .skills-list {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .skills-list li {
+    text-align: center;
+  }
 }

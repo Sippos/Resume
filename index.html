@@ -3,92 +3,166 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sebastian Berger von Lengercke</title>
+  <title>Sebastian Berger von Lengercke | Portfolio</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <header>
-    <figure>
-      <img
-        src="/headshot.jpg"
-        alt="Portrait of Sebastian Berger von Lengercke"
-        width="300"
-        height="300"
-      >
-    </figure>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
 
+<header class="site-header">
+  <figure class="profile-image">
+    <img
+      src="headshot.jpg"
+      alt="Portrait of Sebastian Berger von Lengercke"
+      width="300"
+      height="300"
+    >
+  </figure>
+
+  <div class="intro">
     <h1>Sebastian Berger von Lengercke</h1>
+    <p class="job-title">Industrial Designer</p>
+  </div>
 
-    <address>
-      <ul>
-        <li><a href="mailto:bvlsebastian@gmail.com">bvlsebastian@gmail.com</a></li>
-        <li><a href="tel:+491774768510">+49 177 4768510</a></li>
-      </ul>
-    </address>
-  </header>
+  <address class="contact">
+    <ul aria-label="Contact information">
+      <li><a href="mailto:bvlsebastian@gmail.com">bvlsebastian@gmail.com</a></li>
+      <li><a href="tel:+491774768510">+49 177 4768510</a></li>
+      <li>Ravensbrink 22, 49082 Osnabrück</li>
+    </ul>
+  </address>
+</header>
 
-  <main>
-    <section>
-      <h2>Summary</h2>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio hic
-        eveniet magnam beatae labore cum non? Dolorem quibusdam doloremque
-        voluptates vel unde. Itaque recusandae quia obcaecati maxime iure, aut quam!
-      </p>
-    </section>
+<main id="main-content">
+  <section aria-labelledby="summary-heading">
+    <h2 id="summary-heading">Über mich</h2>
+    <p>
+      Industriedesigner mit ersten Erfahrungen in Agenturarbeit und
+      Startup-Umgebung. Begeistert von Innovationen, Technologien und deren
+      Potenzial, das Leben von Menschen zu verbessern. Mit Stärke im
+      Designprozess von User Journeys, Research, Ideation, Ideenentwicklung
+      und 3D-Modellierung.
+    </p>
+  </section>
 
-    <section>
-      <h2>Education</h2>
-      <ul>
-        <li>
-          <h3>Rechtswissenschaften</h3>
-          <p>Universität Osnabrück, 2014–2016</p>
-        </li>
-        <li>
-          <h3>Deutsch und Geschichte</h3>
-          <p>Universität Osnabrück, 2016–2019</p>
-        </li>
-        <li>
-          <h3>Industriedesign</h3>
-          <p>Hochschule Osnabrück, 2019–2024</p>
-        </li>
-      </ul>
-    </section>
+  <section aria-labelledby="education-heading">
+    <h2 id="education-heading">Bildungsweg</h2>
 
-    <section>
-      <h2>Experience</h2>
-      <ul>
-        <li>
-          <h3>use institute</h3>
-          <p>Praktikum Designagentur, 2020</p>
-        </li>
-        <li>
-          <h3>DFKI</h3>
-          <p>Hilfswissenschaftlicher Mitarbeiter, 2021</p>
-        </li>
-      </ul>
-    </section>
+    <ul class="entry-list">
+      <li>
+        <h3>Rechtswissenschaften</h3>
+        <p>Universität Osnabrück, 2014–2016</p>
+        <p>4 Semester</p>
+      </li>
 
-    <section>
-      <h2>Skills</h2>
-      <ul>
-        <li>
-          <p>
-            UI/UX
-          <p>
-        </li>
-        <li>
-          <p>
-          CAD
-          </p>
-        </li>
-        <li>
-          <p>
-          Design Thinking
-          </p>
-        </li>
-      </ul>
-    </section>
-  </main>
+      <li>
+        <h3>Germanistik & Geschichte</h3>
+        <p>Universität Osnabrück, 2016–2019</p>
+        <p>6 Semester</p>
+      </li>
+
+      <li>
+        <h3>Industrial Design</h3>
+        <p>Hochschule Osnabrück, 2020–2024</p>
+        <p>8 Semester</p>
+        <p>
+          Bachelorarbeit: Ein konzeptioneller Entwurf eines Produktes zur
+          Alltagsbewältigung von neurodivergenten Menschen. Note: 1,5
+        </p>
+      </li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="experience-heading">
+    <h2 id="experience-heading">Erfahrungen</h2>
+
+    <ul class="entry-list">
+      <li>
+        <h3>Praktikum</h3>
+        <p>use institute, Aug.–Dez. 2021</p>
+        <p>
+          Agenturarbeiten, Begleitung gesamter Designprozesse für
+          Industriemaschinen, Drohnen und Ausstellungen.
+        </p>
+        <p>
+          Tätigkeiten: User Research, Ideation, Modellbau und VR-Präsentation.
+        </p>
+      </li>
+
+      <li>
+        <h3>Hilfswissenschaftlicher Mitarbeiter</h3>
+        <p>DFKI / nature robots, Okt. 2022–Apr. 2023</p>
+        <p>
+          Design und Konstruktion eines autonomen Landwirtschaftsroboters.
+        </p>
+        <p>
+          Tätigkeiten: Lastenhefterstellung, User Experience, Roadmap und
+          Konstruktionsplanung.
+        </p>
+      </li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="skills-heading">
+    <h2 id="skills-heading">Skills</h2>
+
+    <h3>Hard Skills</h3>
+    <ul class="skills-list" aria-label="Hard Skills">
+      <li>Modellbau</li>
+      <li>Prototyping & Ideation</li>
+      <li>3D / CAD-Modellierung</li>
+      <li>User Research</li>
+      <li>UI / UX</li>
+    </ul>
+
+    <h3>Soft Skills</h3>
+    <ul class="skills-list" aria-label="Soft Skills">
+      <li>Empathisch</li>
+      <li>Out-of-the-box-Denken</li>
+      <li>Schnelle Auffassungsgabe</li>
+      <li>Hingebungsvoll</li>
+      <li>Aufgeschlossen</li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="tools-heading">
+    <h2 id="tools-heading">Tools</h2>
+
+    <ul class="entry-list">
+      <li>
+        <h3>Blender</h3>
+        <p>Modellierung, Texturing, Rendering, Animation und Rigging</p>
+      </li>
+
+      <li>
+        <h3>Rhinoceros 7</h3>
+        <p>Sub-D-Modellierung, Grasshopper und Flächenrückführung</p>
+      </li>
+
+      <li>
+        <h3>Adobe Creative Cloud</h3>
+        <p>Illustrator, InDesign, Photoshop und Adobe XD</p>
+      </li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="languages-heading">
+    <h2 id="languages-heading">Sprachen</h2>
+
+    <ul class="entry-list">
+      <li>Deutsch: Muttersprache</li>
+      <li>Englisch: B2-Niveau</li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="references-heading">
+    <h2 id="references-heading">Referenzen</h2>
+
+    <p>
+      <a href="https://sipp.design">sipp.design</a>
+    </p>
+  </section>
+</main>
 </body>
 </html>
