@@ -45,3 +45,40 @@ const activeNavObserver = new IntersectionObserver(
 sections.forEach((section) => {
   activeNavObserver.observe(section);
 });
+
+const hero = document.querySelector(".site-header");
+const heroName = document.querySelector(".hero-name");
+const profileImage = document.querySelector(".profile-image");
+
+if (hero && heroName) {
+  hero.addEventListener("mousemove", (event) => {
+    const rect = hero.getBoundingClientRect();
+
+    const x = (event.clientX - rect.left) / rect.width;
+    const y = (event.clientY - rect.top) / rect.height;
+
+    const offsetX = (x - 0.5) * 16;
+    const offsetY = (y - 0.5) * 10;
+
+    heroName.style.setProperty("--x1", `${offsetX * 0.6}px`);
+    heroName.style.setProperty("--y1", `${offsetY * 0.35}px`);
+
+    heroName.style.setProperty("--x2", `${offsetX * -0.45}px`);
+    heroName.style.setProperty("--y2", `${offsetY * -0.25}px`);
+
+    if (profileImage) {
+      profileImage.style.transform = `translate(${offsetX * -0.25}px, ${offsetY * -0.25}px)`;
+    }
+  });
+
+  hero.addEventListener("mouseleave", () => {
+    heroName.style.setProperty("--x1", `0px`);
+    heroName.style.setProperty("--y1", `0px`);
+    heroName.style.setProperty("--x2", `0px`);
+    heroName.style.setProperty("--y2", `0px`);
+
+    if (profileImage) {
+      profileImage.style.transform = `translate(0px, 0px)`;
+    }
+  });
+}
