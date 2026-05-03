@@ -4,6 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sebastian Berger von Lengercke | Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
@@ -23,22 +28,25 @@
   </ul>
   </nav>
 
-  <header class="site-header">
-    <figure class="profile-image">
-      <img
-        src="headshot.jpg"
-        alt="Portrait of Sebastian Berger von Lengercke"
-        width="300"
-        height="300"
-      >
-    </figure>
+<header class="site-header">
+  <div class="intro">
+    <p class="eyebrow">Portfolio / Resume</p>
+    <h1>Sebastian Berger von Lengercke</h1>
 
-    <div class="intro">
-      <p class="eyebrow">Portfolio / Resume</p>
-      <h1>Sebastian Berger von Lengercke</h1>
+    <div class="hero-meta">
+      <figure class="profile-image">
+        <img
+          src="headshot.jpg"
+          alt="Portrait of Sebastian Berger von Lengercke"
+          width="300"
+          height="300"
+        >
+      </figure>
+
       <p class="job-title">Industrial Designer</p>
     </div>
-  </header>
+  </div>
+</header>
 
   <main id="main-content">
 
@@ -194,9 +202,11 @@
       </ul>
     </section>
 
-    <section id="skills" aria-labelledby="skills-heading">
-      <h2 id="skills-heading">Skills</h2>
+<section id="skills" aria-labelledby="skills-heading">
+  <h2 id="skills-heading">Skills</h2>
 
+  <div class="skills-content">
+    <div class="skill-group">
       <h3>Hard Skills</h3>
       <ul class="skills-list" aria-label="Hard Skills">
         <li>Modellbau</li>
@@ -205,7 +215,9 @@
         <li>User Research</li>
         <li>UI / UX</li>
       </ul>
+    </div>
 
+    <div class="skill-group">
       <h3>Soft Skills</h3>
       <ul class="skills-list" aria-label="Soft Skills">
         <li>Empathisch</li>
@@ -214,7 +226,9 @@
         <li>Hingebungsvoll</li>
         <li>Aufgeschlossen</li>
       </ul>
-    </section>
+    </div>
+  </div>
+</section>
 
     <section id="tools" aria-labelledby="tools-heading">
       <h2 id="tools-heading">Tools</h2>
