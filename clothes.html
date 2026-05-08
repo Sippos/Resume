@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sebastian Berger von Lengercke | Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="script.js" defer></script>
+  </head>
+</html>
+
+<body
+  class="bg-[var(--bg)] font-['Inter',system-ui,sans-serif] text-[var(--ink)] leading-[1.45]"
+>
+  <nav
+    class="sticky top-0 z-[1000] flex items-center justify-between gap-8 border-b border-[var(--soft-line)] bg-[rgb(244_242_237_/_0.82)] px-[clamp(1rem,5vw,3rem)] py-4 backdrop-blur-[18px]"
+    aria-label="Main navigation"
+  >
+    <a
+      class="font-['Inter_Tight',system-ui,sans-serif] text-base font-extrabold tracking-[-0.04em] no-underline"
+      href="index.html"
+    >
+      S BvL
+    </a>
+
+    <ul
+      class="flex list-none flex-wrap justify-end gap-x-[1.1rem] gap-y-[0.45rem]"
+    >
+      <li>
+        <a
+          class="text-[0.82rem] font-semibold text-[rgb(17_17_17_/_0.62)] no-underline hover:text-[var(--ink)]"
+          href="index.html#projects"
+        >
+          Projects
+        </a>
+      </li>
+      <li>
+        <a
+          class="text-[0.82rem] font-semibold text-[rgb(17_17_17_/_0.62)] no-underline hover:text-[var(--ink)]"
+          href="index.html#about"
+        >
+          Über mich
+        </a>
+      </li>
+      <li>
+        <a
+          class="text-[0.82rem] font-semibold text-[rgb(17_17_17_/_0.62)] no-underline hover:text-[var(--ink)]"
+          href="index.html#contact"
+        >
+          Contact
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <header
+    class="mx-auto grid max-w-[1240px] gap-8 border-b border-[var(--line)] px-[clamp(1rem,5vw,3rem)] py-[clamp(2rem,6vw,4rem)]"
+  >
+    <div class="grid gap-4">
+      <a
+        href="index.html#projects"
+        class="w-fit text-[0.82rem] font-semibold text-[var(--muted)] no-underline hover:text-[var(--ink)]"
+      >
+        ← Back to projects
+      </a>
+
+      <p
+        class="text-[0.78rem] font-semibold uppercase tracking-[0.08em] text-[var(--muted)]"
+      >
+        From 3D to Reality
+      </p>
+
+      <h1
+        class="max-w-[12ch] font-['Inter_Tight',system-ui,sans-serif] text-[clamp(3rem,8vw,6rem)] font-bold leading-[0.9] tracking-[-0.075em]"
+      >
+        Clothes
+      </h1>
+
+      <p
+        class="max-w-[62ch] text-[clamp(1rem,1.4vw,1.15rem)] text-[var(--muted)]"
+      >
+        A project exploring the transformation from digital 3D design into
+        physical textile and garment expression.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-2 gap-3 md:gap-4">
+      <video
+        class="block aspect-[4/3] w-full bg-[rgb(17_17_17_/_0.06)] object-contain"
+        src="./assets/clothes/cover.webm"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="metadata"
+      ></video>
+
+      <video
+        class="block aspect-[4/3] w-full bg-[rgb(17_17_17_/_0.06)] object-cover"
+        src="./assets/clothes/video-02.webm"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="metadata"
+      ></video>
+
+      <video
+        class="block aspect-[4/3] w-full bg-[rgb(17_17_17_/_0.06)] object-cover"
+        src="./assets/clothes/video-03.webm"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="metadata"
+      ></video>
+
+      <video
+        class="block aspect-[4/3] w-full bg-[rgb(17_17_17_/_0.06)] object-cover"
+        src="./assets/clothes/video-04.webm"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="metadata"
+      ></video>
+    </div>
+  </header>
+</body>

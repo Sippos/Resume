@@ -1,289 +1,626 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sebastian Berger von Lengercke | Portfolio</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sebastian Berger von Lengercke | Portfolio</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
-</head>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="script.js" defer></script>
+  </head>
 
-<body>
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <body
+    class="bg-[var(--bg)] font-['Inter',system-ui,sans-serif] text-[var(--ink)] leading-[1.45]"
+  >
+    <a
+      class="absolute left-4 top-4 z-[2000] -translate-y-[160%] rounded-full bg-[var(--ink)] px-4 py-3 text-white focus:translate-y-0"
+      href="#main-content"
+    >
+      Skip to main content
+    </a>
 
-  <nav class="site-nav" aria-label="Main navigation">
-    <a class="nav-brand" href="#">S BvL</a>
+    <nav
+      class="sticky top-0 z-[1000] flex items-center justify-between gap-8 border-b border-[var(--soft-line)] bg-[rgb(244_242_237_/_0.82)] px-[clamp(1rem,5vw,3rem)] py-4 backdrop-blur-[18px]"
+      aria-label="Main navigation"
+    >
+      <a
+        class="font-['Inter_Tight',system-ui,sans-serif] text-base font-extrabold tracking-[-0.04em] no-underline"
+        href="#"
+        >S BvL</a
+      >
 
-  <ul>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#about">Über mich</a></li>
-    <li><a href="#experience">Erfahrung</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-  </nav>
+      <ul
+        class="flex list-none flex-wrap justify-end gap-x-[1.1rem] gap-y-[0.45rem]"
+      >
+        <li>
+          <a
+            class="text-[0.82rem] font-semibold text-[rgb(17_17_17_/_0.62)] no-underline hover:text-[var(--ink)]"
+            href="#projects"
+            >Projects</a
+          >
+        </li>
+        <li>
+          <a
+            class="text-[0.82rem] font-semibold text-[rgb(17_17_17_/_0.62)] no-underline hover:text-[var(--ink)]"
+            href="#about"
+            >Über mich</a
+          >
+        </li>
+        <li>
+          <a
+            class="text-[0.82rem] font-semibold text-[rgb(17_17_17_/_0.62)] no-underline hover:text-[var(--ink)]"
+            href="#experience"
+            >Erfahrung</a
+          >
+        </li>
+        <li>
+          <a
+            class="text-[0.82rem] font-semibold text-[rgb(17_17_17_/_0.62)] no-underline hover:text-[var(--ink)]"
+            href="#skills"
+            >Skills</a
+          >
+        </li>
+        <li>
+          <a
+            class="text-[0.82rem] font-semibold text-[rgb(17_17_17_/_0.62)] no-underline hover:text-[var(--ink)]"
+            href="#contact"
+            >Contact</a
+          >
+        </li>
+      </ul>
+    </nav>
 
-<header class="site-header">
-  <div class="intro">
-    <p class="eyebrow">Portfolio / Resume</p>
-
-    <h1 class="hero-name" aria-label="Sebastian Berger von Lengercke">
-      <span class="name-line name-line-1">Sebastian Berger</span>
-      <span class="name-line name-line-2">von Lengercke</span>
-    </h1>
-
-    <div class="hero-meta">
-      <figure class="profile-image">
-        <img
-          src="headshot.jpg"
-          alt="Portrait of Sebastian Berger von Lengercke"
-          width="300"
-          height="300"
+    <header
+      class="mx-auto max-w-[1240px] border-b border-[var(--line)] px-[clamp(1rem,5vw,3rem)] py-[clamp(3rem,8vw,6rem)]"
+    >
+      <div class="max-w-[960px]">
+        <p
+          class="mb-4 text-[0.78rem] font-semibold uppercase tracking-[0.08em] text-[var(--muted)]"
         >
-      </figure>
+          Portfolio / Resume
+        </p>
 
-      <p class="job-title">Industrial Designer</p>
-    </div>
-  </div>
-</header>
-
-  <main id="main-content">
-
-    <section id="projects" class="projects-section" aria-labelledby="projects-heading">
-      <h2 id="projects-heading">Projects</h2>
-
-      <p class="section-intro">
-        Eine Auswahl meiner Arbeiten aus Industrial Design, User Research,
-        Prototyping, 3D-Modellierung und Konzeptentwicklung.
-      </p>
-
-      <div class="project-scroll" aria-label="Scrollable project list">
-        <article class="project-card">
-          <img
-            src="assets/donda-stick/cover.png"
-            alt="Cover image for project 1"
-            loading="lazy"
+        <h1
+          class="max-w-[13ch] font-['Inter_Tight',system-ui,sans-serif] text-[clamp(3.6rem,10vw,8.5rem)] font-bold leading-[0.88] tracking-[-0.085em]"
+          aria-label="Sebastian Berger von Lengercke"
+        >
+          <span class="block transition-transform duration-200 ease-out"
+            >Sebastian Berger</span
           >
-
-          <div class="project-card-content">
-            <p class="project-type">Industrial Design / Concept</p>
-            <h3>DONDA stick</h3>
-            <p>
-              Kurze Beschreibung des Projekts, der Herausforderung, deiner Rolle
-              und des Ergebnisses.
-            </p>
-            <a href="projects/project-01.html">View project</a>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <img
-            src="assets/mixed-reality-model/cover.jpg"
-            alt="Cover image for project 2"
-            loading="lazy"
+          <span class="block transition-transform duration-200 ease-out"
+            >von Lengercke</span
           >
+        </h1>
 
-          <div class="project-card-content">
-            <p class="project-type">UX / Research / Prototype</p>
-            <h3>Mixed Reality Model</h3>
-            <p>
-              Kurze Beschreibung des Designprozesses, der Research-Phase und des
-              Prototypings.
-            </p>
-            <a href="projects/project-02.html">View project</a>
-          </div>
-        </article>
+        <div class="mt-[1.35rem] flex items-center gap-4">
+          <figure class="transition-transform duration-200 ease-out">
+            <img
+              class="block size-[clamp(58px,7vw,82px)] rounded-full object-cover grayscale-[0.05]"
+              src="headshot.jpg"
+              alt="Portrait of Sebastian Berger von Lengercke"
+              width="300"
+              height="300"
+            />
+          </figure>
 
-        <article class="project-card">
-          <img
-            src="assets/figuren/cover.png"
-            alt="Cover image for project 3"
-            loading="lazy"
+          <p
+            class="text-[clamp(1rem,1.7vw,1.25rem)] font-medium text-[var(--muted)]"
           >
-
-          <div class="project-card-content">
-            <p class="project-type">3D / CAD / Rendering</p>
-            <h3>Figuren</h3>
-            <p>
-              Kurze Beschreibung deiner 3D-Arbeit, des CAD-Modells oder des
-              finalen Renderings.
-            </p>
-            <a href="projects/project-03.html">View project</a>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <img
-            src="assets/revive/cover.png"
-            alt="Cover image for project 4"
-            loading="lazy"
-          >
-
-          <div class="project-card-content">
-            <p class="project-type">Bachelor Thesis / Product Concept</p>
-            <h3>Bachelor Project</h3>
-            <p>
-              Konzeptentwurf eines Produktes zur Alltagsbewältigung von
-              neurodivergenten Menschen.
-            </p>
-            <a href="projects/project-04.html">View project</a>
-          </div>
-        </article>
+            Industrial Designer
+          </p>
+        </div>
       </div>
-    </section>
+    </header>
 
-        <section id="about" aria-labelledby="summary-heading">
-      <h2 id="summary-heading">Über mich</h2>
-      <p>
-        Industriedesigner mit ersten Erfahrungen in Agenturarbeit und
-        Startup-Umgebung. Begeistert von Innovationen, Technologien und deren
-        Potenzial, das Leben von Menschen zu verbessern. Mit Stärke im
-        Designprozess von User Journeys, Research, Ideation, Ideenentwicklung
-        und 3D-Modellierung.
-      </p>
-    </section>
+    <main
+      id="main-content"
+      class="mx-auto grid max-w-[1240px] gap-[clamp(3rem,7vw,6rem)] px-[clamp(1rem,5vw,3rem)] pb-20 pt-[clamp(2rem,5vw,4rem)]"
+    >
+      <section
+        id="projects"
+        class="grid gap-5"
+        aria-labelledby="projects-heading"
+      >
+        <h2
+          id="projects-heading"
+          class="mb-5 font-['Inter_Tight',system-ui,sans-serif] text-[clamp(1.5rem,3vw,2.25rem)] font-bold leading-none tracking-[-0.055em]"
+        >
+          Projects
+        </h2>
 
-    <section id="education" aria-labelledby="education-heading">
-      <h2 id="education-heading">Bildungsweg</h2>
+        <p class="max-w-[560px] text-[0.95rem] text-[var(--muted)]">
+          Eine Auswahl meiner Arbeiten aus Industrial Design, User Research,
+          Prototyping, 3D-Modellierung und Konzeptentwicklung.
+        </p>
 
-      <ul class="entry-list">
-        <li>
-          <h3>Rechtswissenschaften</h3>
-          <p>Universität Osnabrück, 2014–2016</p>
-          <p>4 Semester</p>
-        </li>
+        <div
+          class="grid grid-cols-1 gap-[clamp(1rem,2vw,1.4rem)] md:grid-cols-2 lg:grid-cols-3"
+          aria-label="Project list"
+        >
+          <article class="group relative overflow-hidden bg-transparent">
+            <img
+              class="block aspect-[4/3] w-full bg-[rgb(17_17_17_/_0.06)] object-cover transition duration-500 ease-out group-hover:scale-[1.025] group-hover:brightness-[0.88]"
+              src="assets/donda-stick/cover.png"
+              alt="Cover image for DONDA stick"
+              loading="lazy"
+            />
+            <div class="pt-3">
+              <p
+                class="mb-1 text-[0.72rem] font-semibold tracking-[0.04em] text-[var(--muted)]"
+              >
+                Industrial Design / Concept
+              </p>
+              <h3
+                class="font-['Inter_Tight',system-ui,sans-serif] text-base font-bold tracking-[-0.025em]"
+              >
+                DONDA stick
+              </h3>
+            </div>
+            <a
+              class="absolute inset-0 grid place-items-center bg-[rgb(0_0_0_/_0.32)] text-[0.85rem] font-bold text-white opacity-0 no-underline transition-opacity duration-300 after:content-['_→'] group-hover:opacity-100"
+              href="projects/project-01.html"
+              >View project</a
+            >
+          </article>
 
-        <li>
-          <h3>Germanistik & Geschichte</h3>
-          <p>Universität Osnabrück, 2016–2019</p>
-          <p>6 Semester</p>
-        </li>
+          <article class="group relative overflow-hidden bg-transparent">
+            <img
+              class="block aspect-[4/3] w-full bg-[rgb(17_17_17_/_0.06)] object-cover transition duration-500 ease-out group-hover:scale-[1.025] group-hover:brightness-[0.88]"
+              src="assets/mixed-reality-model/cover.jpg"
+              alt="Cover image for Mixed Reality Model"
+              loading="lazy"
+            />
+            <div class="pt-3">
+              <p
+                class="mb-1 text-[0.72rem] font-semibold tracking-[0.04em] text-[var(--muted)]"
+              >
+                UX / Research / Prototype
+              </p>
+              <h3
+                class="font-['Inter_Tight',system-ui,sans-serif] text-base font-bold tracking-[-0.025em]"
+              >
+                Mixed Reality Model
+              </h3>
+            </div>
+            <a
+              class="absolute inset-0 grid place-items-center bg-[rgb(0_0_0_/_0.32)] text-[0.85rem] font-bold text-white opacity-0 no-underline transition-opacity duration-300 after:content-['_→'] group-hover:opacity-100"
+              href="projects/project-02.html"
+              >View project</a
+            >
+          </article>
 
-        <li>
-          <h3>Industrial Design</h3>
-          <p>Hochschule Osnabrück, 2020–2024</p>
-          <p>8 Semester</p>
-          <p>
-            Bachelorarbeit: Ein konzeptioneller Entwurf eines Produktes zur
-            Alltagsbewältigung von neurodivergenten Menschen. Note: 1,5
-          </p>
-        </li>
-      </ul>
-    </section>
+          <article class="group relative overflow-hidden bg-transparent">
+            <img
+              class="block aspect-[4/3] w-full bg-[rgb(17_17_17_/_0.06)] object-cover transition duration-500 ease-out group-hover:scale-[1.025] group-hover:brightness-[0.88]"
+              src="assets/figuren/cover.png"
+              alt="Cover image for Figuren"
+              loading="lazy"
+            />
+            <div class="pt-3">
+              <p
+                class="mb-1 text-[0.72rem] font-semibold tracking-[0.04em] text-[var(--muted)]"
+              >
+                3D / CAD / Rendering
+              </p>
+              <h3
+                class="font-['Inter_Tight',system-ui,sans-serif] text-base font-bold tracking-[-0.025em]"
+              >
+                Figuren
+              </h3>
+            </div>
+            <a
+              class="absolute inset-0 grid place-items-center bg-[rgb(0_0_0_/_0.32)] text-[0.85rem] font-bold text-white opacity-0 no-underline transition-opacity duration-300 after:content-['_→'] group-hover:opacity-100"
+              href="projects/project-03.html"
+              >View project</a
+            >
+          </article>
 
-    <section id="experience" aria-labelledby="experience-heading">
-      <h2 id="experience-heading">Erfahrungen</h2>
+          <article class="group relative overflow-hidden bg-transparent">
+            <img
+              class="block aspect-[4/3] w-full bg-[rgb(17_17_17_/_0.06)] object-cover transition duration-500 ease-out group-hover:scale-[1.025] group-hover:brightness-[0.88]"
+              src="assets/revive/cover.png"
+              alt="Cover image for Bachelor Project"
+              loading="lazy"
+            />
+            <div class="pt-3">
+              <p
+                class="mb-1 text-[0.72rem] font-semibold tracking-[0.04em] text-[var(--muted)]"
+              >
+                Bachelor Thesis / Product Concept
+              </p>
+              <h3
+                class="font-['Inter_Tight',system-ui,sans-serif] text-base font-bold tracking-[-0.025em]"
+              >
+                Bachelor Project
+              </h3>
+            </div>
+            <a
+              class="absolute inset-0 grid place-items-center bg-[rgb(0_0_0_/_0.32)] text-[0.85rem] font-bold text-white opacity-0 no-underline transition-opacity duration-300 after:content-['_→'] group-hover:opacity-100"
+              href="projects/project-04.html"
+              >View project</a
+            >
+          </article>
 
-      <ul class="entry-list">
-        <li>
-          <h3>Praktikum</h3>
-          <p>use institute, Aug.–Dez. 2021</p>
-          <p>
-            Agenturarbeiten, Begleitung gesamter Designprozesse für
-            Industriemaschinen, Drohnen und Ausstellungen.
-          </p>
-          <p>
-            Tätigkeiten: User Research, Ideation, Modellbau und VR-Präsentation.
-          </p>
-        </li>
+          <article class="group relative overflow-hidden bg-transparent">
+            <video
+              class="block aspect-[4/3] w-full bg-[rgb(17_17_17_/_0.06)] object-contain transition duration-500 ease-out group-hover:scale-[1.025] group-hover:brightness-[0.88]"
+              src="./assets/clothes/cover.webm"
+              autoplay
+              muted
+              loop
+              playsinline
+              preload="metadata"
+              aria-label="Preview video for Clothes project"
+            ></video>
 
-        <li>
-          <h3>Hilfswissenschaftlicher Mitarbeiter</h3>
-          <p>DFKI / nature robots, Okt. 2022–Apr. 2023</p>
-          <p>
-            Design und Konstruktion eines autonomen Landwirtschaftsroboters.
-          </p>
-          <p>
-            Tätigkeiten: Lastenhefterstellung, User Experience, Roadmap und
-            Konstruktionsplanung.
-          </p>
-        </li>
-      </ul>
-    </section>
+            <div class="pt-3">
+              <p
+                class="mb-1 text-[0.72rem] font-semibold tracking-[0.04em] text-[var(--muted)]"
+              >
+                From 3D to Reality
+              </p>
 
-<section id="skills" aria-labelledby="skills-heading">
-  <h2 id="skills-heading">Skills</h2>
+              <h3
+                class="font-['Inter_Tight',system-ui,sans-serif] text-base font-bold tracking-[-0.025em]"
+              >
+                Clothes
+              </h3>
+            </div>
 
-  <div class="skills-content">
-    <div class="skill-group">
-      <h3>Hard Skills</h3>
-      <ul class="skills-list" aria-label="Hard Skills">
-        <li>Modellbau</li>
-        <li>Prototyping & Ideation</li>
-        <li>3D / CAD-Modellierung</li>
-        <li>User Research</li>
-        <li>UI / UX</li>
-      </ul>
-    </div>
+            <a
+              class="absolute inset-0 grid place-items-center bg-[rgb(0_0_0_/_0.32)] text-[0.85rem] font-bold text-white opacity-0 no-underline transition-opacity duration-300 after:content-['_→'] group-hover:opacity-100"
+              href="./clothes.html"
+            >
+              View project
+            </a>
+          </article>
+        </div>
+      </section>
 
-    <div class="skill-group">
-      <h3>Soft Skills</h3>
-      <ul class="skills-list" aria-label="Soft Skills">
-        <li>Empathisch</li>
-        <li>Out-of-the-box-Denken</li>
-        <li>Schnelle Auffassungsgabe</li>
-        <li>Hingebungsvoll</li>
-        <li>Aufgeschlossen</li>
-      </ul>
-    </div>
-  </div>
-</section>
+      <section
+        id="about"
+        class="max-w-[760px]"
+        aria-labelledby="summary-heading"
+      >
+        <h2
+          id="summary-heading"
+          class="mb-5 font-['Inter_Tight',system-ui,sans-serif] text-[clamp(1.5rem,3vw,2.25rem)] font-bold leading-none tracking-[-0.055em]"
+        >
+          Über mich
+        </h2>
+        <p class="max-w-[70ch] text-[rgb(17_17_17_/_0.7)]">
+          Industriedesigner mit ersten Erfahrungen in Agenturarbeit und
+          Startup-Umgebung. Begeistert von Innovationen, Technologien und deren
+          Potenzial, das Leben von Menschen zu verbessern. Mit Stärke im
+          Designprozess von User Journeys, Research, Ideation, Ideenentwicklung
+          und 3D-Modellierung.
+        </p>
+      </section>
 
-    <section id="tools" aria-labelledby="tools-heading">
-      <h2 id="tools-heading">Tools</h2>
-
-      <ul class="entry-list">
-        <li>
-          <h3>Blender</h3>
-          <p>Modellierung, Texturing, Rendering, Animation und Rigging</p>
-        </li>
-
-        <li>
-          <h3>Rhinoceros 7</h3>
-          <p>Sub-D-Modellierung, Grasshopper und Flächenrückführung</p>
-        </li>
-
-        <li>
-          <h3>Adobe Creative Cloud</h3>
-          <p>Illustrator, InDesign, Photoshop und Adobe XD</p>
-        </li>
-      </ul>
-    </section>
-
-    <section id="languages" aria-labelledby="languages-heading">
-      <h2 id="languages-heading">Sprachen</h2>
-
-      <ul class="entry-list">
-        <li>Deutsch: Muttersprache</li>
-        <li>Englisch: B2-Niveau</li>
-      </ul>
-    </section>
-
-    <section id="references" aria-labelledby="references-heading">
-      <h2 id="references-heading">Referenzen</h2>
-
-      <p>
-        <a href="https://sipp.design">sipp.design</a>
-      </p>
-    </section>
-
-    <section id="contact" aria-labelledby="contact-heading">
-      <h2 id="contact-heading">Contact</h2>
-
-      <address class="contact-section">
-        <ul>
-          <li><a href="mailto:bvlsebastian@gmail.com">bvlsebastian@gmail.com</a></li>
-          <li><a href="tel:+491774768510">+49 177 4768510</a></li>
-          <li>Osnabrück</li>
-          <li><a href="https://sipp.design">sipp.design</a></li>
+      <section
+        id="education"
+        class="grid gap-6 border-t border-[var(--line)] pt-6 md:grid-cols-[minmax(160px,0.32fr)_1fr]"
+        aria-labelledby="education-heading"
+      >
+        <h2
+          id="education-heading"
+          class="font-['Inter_Tight',system-ui,sans-serif] text-[clamp(1.1rem,2vw,1.35rem)] font-bold leading-none tracking-[-0.035em]"
+        >
+          Bildungsweg
+        </h2>
+        <ul class="grid list-none">
+          <li
+            class="grid gap-1 border-t border-[var(--soft-line)] py-4 first:border-t-0 first:pt-0"
+          >
+            <h3
+              class="font-['Inter_Tight',system-ui,sans-serif] text-base font-bold"
+            >
+              Rechtswissenschaften
+            </h3>
+            <p class="text-[0.92rem] text-[var(--muted)]">
+              Universität Osnabrück, 2014–2016
+            </p>
+            <p class="text-[0.92rem] text-[var(--muted)]">4 Semester</p>
+          </li>
+          <li class="grid gap-1 border-t border-[var(--soft-line)] py-4">
+            <h3
+              class="font-['Inter_Tight',system-ui,sans-serif] text-base font-bold"
+            >
+              Germanistik & Geschichte
+            </h3>
+            <p class="text-[0.92rem] text-[var(--muted)]">
+              Universität Osnabrück, 2016–2019
+            </p>
+            <p class="text-[0.92rem] text-[var(--muted)]">6 Semester</p>
+          </li>
+          <li class="grid gap-1 border-t border-[var(--soft-line)] py-4">
+            <h3
+              class="font-['Inter_Tight',system-ui,sans-serif] text-base font-bold"
+            >
+              Industrial Design
+            </h3>
+            <p class="text-[0.92rem] text-[var(--muted)]">
+              Hochschule Osnabrück, 2020–2024
+            </p>
+            <p class="text-[0.92rem] text-[var(--muted)]">8 Semester</p>
+            <p class="text-[0.92rem] text-[var(--muted)]">
+              Bachelorarbeit: Ein konzeptioneller Entwurf eines Produktes zur
+              Alltagsbewältigung von neurodivergenten Menschen. Note: 1,5
+            </p>
+          </li>
         </ul>
-      </address>
-    </section>
-  </main>
-</body>
+      </section>
+
+      <section
+        id="experience"
+        class="grid gap-6 border-t border-[var(--line)] pt-6 md:grid-cols-[minmax(160px,0.32fr)_1fr]"
+        aria-labelledby="experience-heading"
+      >
+        <h2
+          id="experience-heading"
+          class="font-['Inter_Tight',system-ui,sans-serif] text-[clamp(1.1rem,2vw,1.35rem)] font-bold leading-none tracking-[-0.035em]"
+        >
+          Erfahrungen
+        </h2>
+        <ul class="grid list-none">
+          <li
+            class="grid gap-1 border-t border-[var(--soft-line)] py-4 first:border-t-0 first:pt-0"
+          >
+            <h3
+              class="font-['Inter_Tight',system-ui,sans-serif] text-base font-bold"
+            >
+              Praktikum
+            </h3>
+            <p class="text-[0.92rem] text-[var(--muted)]">
+              use institute, Aug.–Dez. 2021
+            </p>
+            <p class="text-[0.92rem] text-[var(--muted)]">
+              Agenturarbeiten, Begleitung gesamter Designprozesse für
+              Industriemaschinen, Drohnen und Ausstellungen.
+            </p>
+            <p class="text-[0.92rem] text-[var(--muted)]">
+              Tätigkeiten: User Research, Ideation, Modellbau und
+              VR-Präsentation.
+            </p>
+          </li>
+          <li class="grid gap-1 border-t border-[var(--soft-line)] py-4">
+            <h3
+              class="font-['Inter_Tight',system-ui,sans-serif] text-base font-bold"
+            >
+              Hilfswissenschaftlicher Mitarbeiter
+            </h3>
+            <p class="text-[0.92rem] text-[var(--muted)]">
+              DFKI / nature robots, Okt. 2022–Apr. 2023
+            </p>
+            <p class="text-[0.92rem] text-[var(--muted)]">
+              Design und Konstruktion eines autonomen Landwirtschaftsroboters.
+            </p>
+            <p class="text-[0.92rem] text-[var(--muted)]">
+              Tätigkeiten: Lastenhefterstellung, User Experience, Roadmap und
+              Konstruktionsplanung.
+            </p>
+          </li>
+        </ul>
+      </section>
+
+      <section
+        id="skills"
+        class="grid gap-6 border-t border-[var(--line)] pt-6 md:grid-cols-[minmax(160px,0.32fr)_1fr]"
+        aria-labelledby="skills-heading"
+      >
+        <h2
+          id="skills-heading"
+          class="font-['Inter_Tight',system-ui,sans-serif] text-[clamp(1.1rem,2vw,1.35rem)] font-bold leading-none tracking-[-0.035em]"
+        >
+          Skills
+        </h2>
+        <div class="grid gap-5">
+          <div class="grid gap-3">
+            <h3
+              class="font-['Inter_Tight',system-ui,sans-serif] text-[0.9rem] font-bold tracking-[-0.02em]"
+            >
+              Hard Skills
+            </h3>
+            <ul class="flex list-none flex-wrap gap-2">
+              <li
+                class="rounded-full border border-[var(--line)] px-3 py-1.5 text-[0.86rem] font-medium text-[rgb(17_17_17_/_0.72)]"
+              >
+                Modellbau
+              </li>
+              <li
+                class="rounded-full border border-[var(--line)] px-3 py-1.5 text-[0.86rem] font-medium text-[rgb(17_17_17_/_0.72)]"
+              >
+                Prototyping & Ideation
+              </li>
+              <li
+                class="rounded-full border border-[var(--line)] px-3 py-1.5 text-[0.86rem] font-medium text-[rgb(17_17_17_/_0.72)]"
+              >
+                3D / CAD-Modellierung
+              </li>
+              <li
+                class="rounded-full border border-[var(--line)] px-3 py-1.5 text-[0.86rem] font-medium text-[rgb(17_17_17_/_0.72)]"
+              >
+                User Research
+              </li>
+              <li
+                class="rounded-full border border-[var(--line)] px-3 py-1.5 text-[0.86rem] font-medium text-[rgb(17_17_17_/_0.72)]"
+              >
+                UI / UX
+              </li>
+            </ul>
+          </div>
+
+          <div class="grid gap-3">
+            <h3
+              class="font-['Inter_Tight',system-ui,sans-serif] text-[0.9rem] font-bold tracking-[-0.02em]"
+            >
+              Soft Skills
+            </h3>
+            <ul class="flex list-none flex-wrap gap-2">
+              <li
+                class="rounded-full border border-[var(--line)] px-3 py-1.5 text-[0.86rem] font-medium text-[rgb(17_17_17_/_0.72)]"
+              >
+                Empathisch
+              </li>
+              <li
+                class="rounded-full border border-[var(--line)] px-3 py-1.5 text-[0.86rem] font-medium text-[rgb(17_17_17_/_0.72)]"
+              >
+                Out-of-the-box-Denken
+              </li>
+              <li
+                class="rounded-full border border-[var(--line)] px-3 py-1.5 text-[0.86rem] font-medium text-[rgb(17_17_17_/_0.72)]"
+              >
+                Schnelle Auffassungsgabe
+              </li>
+              <li
+                class="rounded-full border border-[var(--line)] px-3 py-1.5 text-[0.86rem] font-medium text-[rgb(17_17_17_/_0.72)]"
+              >
+                Hingebungsvoll
+              </li>
+              <li
+                class="rounded-full border border-[var(--line)] px-3 py-1.5 text-[0.86rem] font-medium text-[rgb(17_17_17_/_0.72)]"
+              >
+                Aufgeschlossen
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="tools"
+        class="grid gap-6 border-t border-[var(--line)] pt-6 md:grid-cols-[minmax(160px,0.32fr)_1fr]"
+        aria-labelledby="tools-heading"
+      >
+        <h2
+          id="tools-heading"
+          class="font-['Inter_Tight',system-ui,sans-serif] text-[clamp(1.1rem,2vw,1.35rem)] font-bold leading-none tracking-[-0.035em]"
+        >
+          Tools
+        </h2>
+        <ul class="grid list-none">
+          <li
+            class="grid gap-1 border-t border-[var(--soft-line)] py-4 first:border-t-0 first:pt-0"
+          >
+            <h3
+              class="font-['Inter_Tight',system-ui,sans-serif] text-base font-bold"
+            >
+              Blender
+            </h3>
+            <p class="text-[0.92rem] text-[var(--muted)]">
+              Modellierung, Texturing, Rendering, Animation und Rigging
+            </p>
+          </li>
+          <li class="grid gap-1 border-t border-[var(--soft-line)] py-4">
+            <h3
+              class="font-['Inter_Tight',system-ui,sans-serif] text-base font-bold"
+            >
+              Rhinoceros 7
+            </h3>
+            <p class="text-[0.92rem] text-[var(--muted)]">
+              Sub-D-Modellierung, Grasshopper und Flächenrückführung
+            </p>
+          </li>
+          <li class="grid gap-1 border-t border-[var(--soft-line)] py-4">
+            <h3
+              class="font-['Inter_Tight',system-ui,sans-serif] text-base font-bold"
+            >
+              Adobe Creative Cloud
+            </h3>
+            <p class="text-[0.92rem] text-[var(--muted)]">
+              Illustrator, InDesign, Photoshop und Adobe XD
+            </p>
+          </li>
+        </ul>
+      </section>
+
+      <section
+        id="languages"
+        class="grid gap-6 border-t border-[var(--line)] pt-6 md:grid-cols-[minmax(160px,0.32fr)_1fr]"
+        aria-labelledby="languages-heading"
+      >
+        <h2
+          id="languages-heading"
+          class="font-['Inter_Tight',system-ui,sans-serif] text-[clamp(1.1rem,2vw,1.35rem)] font-bold leading-none tracking-[-0.035em]"
+        >
+          Sprachen
+        </h2>
+        <ul class="flex list-none flex-wrap gap-2">
+          <li
+            class="rounded-full border border-[var(--line)] px-3 py-1.5 text-[0.86rem]"
+          >
+            Deutsch: Muttersprache
+          </li>
+          <li
+            class="rounded-full border border-[var(--line)] px-3 py-1.5 text-[0.86rem]"
+          >
+            Englisch: B2-Niveau
+          </li>
+        </ul>
+      </section>
+
+      <section
+        id="references"
+        class="grid gap-6 border-t border-[var(--line)] pt-6 md:grid-cols-[minmax(160px,0.32fr)_1fr]"
+        aria-labelledby="references-heading"
+      >
+        <h2
+          id="references-heading"
+          class="font-['Inter_Tight',system-ui,sans-serif] text-[clamp(1.1rem,2vw,1.35rem)] font-bold leading-none tracking-[-0.035em]"
+        >
+          Referenzen
+        </h2>
+        <p class="font-semibold">
+          <a href="https://sipp.design">sipp.design</a>
+        </p>
+      </section>
+
+      <section
+        id="contact"
+        class="grid gap-6 border-t border-[var(--line)] pt-6 md:grid-cols-[minmax(160px,0.32fr)_1fr]"
+        aria-labelledby="contact-heading"
+      >
+        <h2
+          id="contact-heading"
+          class="font-['Inter_Tight',system-ui,sans-serif] text-[clamp(1.1rem,2vw,1.35rem)] font-bold leading-none tracking-[-0.035em]"
+        >
+          Contact
+        </h2>
+        <address class="not-italic">
+          <ul class="flex list-none flex-wrap gap-x-4 gap-y-2">
+            <li>
+              <a
+                class="font-semibold no-underline hover:underline"
+                href="mailto:bvlsebastian@gmail.com"
+                >bvlsebastian@gmail.com</a
+              >
+            </li>
+            <li>
+              <a
+                class="font-semibold no-underline hover:underline"
+                href="tel:+491774768510"
+                >+49 177 4768510</a
+              >
+            </li>
+            <li>Osnabrück</li>
+            <li>
+              <a
+                class="font-semibold no-underline hover:underline"
+                href="https://sipp.design"
+                >sipp.design</a
+              >
+            </li>
+          </ul>
+        </address>
+      </section>
+    </main>
+  </body>
 </html>
