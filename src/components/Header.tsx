@@ -96,8 +96,15 @@ export default function Header() {
         </ul>
       </nav>
 
-      <header className="mx-auto max-w-[1240px] border-b border-[var(--line)] px-[clamp(1rem,5vw,3rem)] py-[clamp(1.5rem,4vw,3rem)]">
-        <div className="max-w-[960px]">
+      <header className="relative mx-auto max-w-[1240px] border-b border-[var(--line)] px-[clamp(1rem,5vw,3rem)] py-[clamp(1.5rem,4vw,3rem)]">
+        <video
+          src="assets/figuren/WebsiteIntro.webm"
+          autoPlay
+          muted
+          playsInline
+          className="absolute bottom-0 right-[5%] h-[120%] max-h-[500px] w-auto object-contain pointer-events-none z-10 drop-shadow-xl"
+        />
+        <div className="relative z-20 max-w-[960px]">
           <p className="mb-4 text-[0.78rem] font-semibold uppercase tracking-[0.08em] text-[var(--muted)] m-0">
             Portfolio
           </p>
