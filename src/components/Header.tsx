@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import { useEffect, useRef } from 'react'
 
 const AnimatedLine = ({ text }: { text: string }) => {
   return (
@@ -32,6 +33,16 @@ const AnimatedLine = ({ text }: { text: string }) => {
 }
 
 export default function Header() {
+  const videoRef = useRef<HTMLVideoElement>(null)
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.defaultMuted = true
+      videoRef.current.muted = true
+      videoRef.current.play().catch(e => console.log("Autoplay prevented:", e))
+    }
+  }, [])
+
   return (
     <>
       <a
@@ -96,13 +107,14 @@ export default function Header() {
         </ul>
       </nav>
 
-      <header className="relative mx-auto max-w-[1240px] border-b border-[var(--line)] px-[clamp(1rem,5vw,3rem)] py-[clamp(1.5rem,4vw,3rem)]">
+      <header className="relative mx-auto max-w-[1240px] border-b border-[var(--line)] px-[clamp(1rem,5vw,3rem)] py-[clamp(1.5rem,4vw,3rem)] overflow-hidden md:overflow-visible">
         <video
+          ref={videoRef}
           src="assets/figuren/WebsiteIntro.webm"
           autoPlay
           muted
           playsInline
-          className="absolute bottom-0 right-[5%] h-[120%] max-h-[500px] w-auto object-contain pointer-events-none z-10 drop-shadow-xl"
+          className="absolute bottom-0 -right-[2%] md:-right-[8%] h-[100%] max-h-[380px] w-auto object-contain pointer-events-none z-10 drop-shadow-xl"
         />
         <div className="relative z-20 max-w-[960px]">
           <p className="mb-4 text-[0.78rem] font-semibold uppercase tracking-[0.08em] text-[var(--muted)] m-0">
