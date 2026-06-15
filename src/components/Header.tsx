@@ -128,10 +128,7 @@ export default function Header() {
             onMouseLeave={() => setIsHeadlineHovered(false)}
           >
             <div>
-              <span className="inline-block mr-[0.25em]">
-                <KineticTextReveal text="Sebastian" hoverText="$IP" forceHover={isHeadlineHovered} />
-              </span>
-              <KineticTextReveal text="Berger" hoverText="Berger" forceHover={isHeadlineHovered} />
+              <KineticTextReveal text="Sebastian Berger" hoverText="$IP Berger" forceHover={isHeadlineHovered} />
             </div>
             <KineticTextReveal text="von Lengercke" hoverText="von Lengercke" forceHover={isHeadlineHovered} />
           </h1>
