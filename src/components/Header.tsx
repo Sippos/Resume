@@ -1,19 +1,23 @@
 import { motion } from 'framer-motion'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
-const KineticTextReveal = ({ text }: { text: string }) => {
+const KineticTextReveal = ({ text, hoverText }: { text: string, hoverText?: string }) => {
+  const [isHovered, setIsHovered] = useState(false)
+  const displayText = isHovered && hoverText ? hoverText : text
   return (
     <motion.span
       initial="hidden"
       animate="visible"
       whileHover="hover"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
       className="inline-block relative cursor-default"
     >
       <motion.span 
         variants={{ hover: { transition: { staggerChildren: 0.03 } } }}
         className="inline-block"
       >
-        {text.split(' ').map((word, wordIndex) => (
+        {displayText.split(' ').map((word, wordIndex) => (
           <span key={wordIndex} className="inline-block whitespace-nowrap mr-[0.25em] last:mr-0">
             {word.split('').map((char, i) => (
               <motion.span
@@ -48,36 +52,9 @@ const KineticTextReveal = ({ text }: { text: string }) => {
   )
 }
 
+import Navbar from './Navbar'
+
 export default function Header() {
-  const [activeSection, setActiveSection] = useState<string>('')
-
-  useEffect(() => {
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveSection(entry.target.id)
-          }
-        })
-      },
-      { rootMargin: '-20% 0px -70% 0px' }
-    )
-
-    const sections = document.querySelectorAll('section[id]')
-    sections.forEach((section) => observer.observe(section))
-
-    return () => observer.disconnect()
-  }, [])
-
-  const navLinks = [
-    { name: 'Projects', href: '#projects-software' },
-    { name: 'Über mich', href: '#about' },
-    { name: 'Erfahrung', href: '#experience' },
-    { name: 'Skills', href: '#skills' },
-    { name: 'Contact', href: '#contact' },
-  ]
-
   return (
     <>
       <a
@@ -87,37 +64,7 @@ export default function Header() {
         Skip to main content
       </a>
 
-      <nav
-        className="sticky top-0 z-[1000] flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-8 border-b border-[var(--soft-line)] bg-[rgb(244_242_237_/_0.82)] px-[clamp(1rem,5vw,3rem)] py-4 backdrop-blur-[18px]"
-        aria-label="Main navigation"
-      >
-        <a
-          className="font-['Inter_Tight',system-ui,sans-serif] text-base font-extrabold tracking-[-0.04em] no-underline w-full sm:w-auto text-center sm:text-left"
-          href="#"
-        >
-          $IP BvL
-        </a>
-
-        <ul className="flex list-none flex-wrap justify-center sm:justify-end gap-x-[1.1rem] gap-y-[0.45rem] m-0 p-0">
-          {navLinks.map((link) => {
-            const isActive = activeSection === link.href.substring(1)
-            return (
-              <li key={link.name}>
-                <a
-                  className={`text-[0.82rem] transition-colors ${
-                    isActive
-                      ? 'font-extrabold text-[var(--ink)] drop-shadow-sm scale-105 inline-block'
-                      : 'font-semibold text-[rgb(17_17_17_/_0.62)] hover:text-[var(--ink)]'
-                  } no-underline`}
-                  href={link.href}
-                >
-                  {link.name}
-                </a>
-              </li>
-            )
-          })}
-        </ul>
-      </nav>
+      <Navbar />
 
       <header className="relative mx-auto max-w-[1240px] border-b border-[var(--line)] px-[clamp(1rem,5vw,3rem)] py-[clamp(1.5rem,4vw,3rem)] overflow-hidden md:overflow-visible">
         <img
@@ -134,7 +81,7 @@ export default function Header() {
             className="max-w-[13ch] font-['Inter_Tight',system-ui,sans-serif] text-[clamp(2.5rem,10vw,8.5rem)] font-bold leading-[0.88] tracking-[-0.085em] m-0 mt-2"
             aria-label="$IP Berger von Lengercke"
           >
-            <KineticTextReveal text="$IP Berger" />
+            <KineticTextReveal text="Sebastian Berger" hoverText="$IP Berger" />
             <KineticTextReveal text="von Lengercke" />
           </h1>
 

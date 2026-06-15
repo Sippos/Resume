@@ -1,4 +1,6 @@
+import { Settings, Hammer } from 'lucide-react'
 import Header from '../components/Header'
+import { Link } from 'react-router-dom'
 
 export default function Home() {
   return (
@@ -16,9 +18,9 @@ export default function Home() {
         >
           <h2
             id="projects-software-heading"
-            className="mb-2 font-['Inter_Tight',system-ui,sans-serif] text-[clamp(1.5rem,3vw,2.25rem)] font-bold leading-none tracking-[-0.055em]"
+            className="mb-2 flex items-center gap-3 font-['Inter_Tight',system-ui,sans-serif] text-[clamp(1.5rem,3vw,2.25rem)] font-bold leading-none tracking-[-0.055em]"
           >
-            Softwareentwicklung
+            Softwareentwicklung <Settings className="text-[var(--muted)]" size={32} strokeWidth={1.5} />
           </h2>
 
           <p className="max-w-[560px] text-[0.95rem] text-[var(--muted)]">
@@ -37,12 +39,18 @@ export default function Home() {
                 loading="lazy"
               />
               <div className="pt-3">
-                <p className="mb-1 text-[0.72rem] font-semibold tracking-[0.04em] text-[var(--muted)]">
-                  Party Game / React + Vite
-                </p>
+                <div className="mb-2 flex flex-wrap gap-1.5">
+                  <span className="rounded-full border border-[var(--line)] px-2 py-0.5 text-[0.65rem] font-medium text-[rgb(17_17_17_/_0.72)] bg-[var(--bg)]">Card Game</span>
+                  <span className="flex items-center gap-1 rounded-full border border-[var(--line)] px-2 py-0.5 text-[0.65rem] font-medium text-[rgb(17_17_17_/_0.72)] bg-[var(--bg)]"><i className="devicon-react-original colored"></i> React</span>
+                  <span className="rounded-full border border-[var(--line)] px-2 py-0.5 text-[0.65rem] font-medium text-[rgb(17_17_17_/_0.72)] bg-[var(--bg)]">Vite</span>
+                  <span className="rounded-full border border-[var(--line)] px-2 py-0.5 text-[0.65rem] font-medium text-[rgb(17_17_17_/_0.72)] bg-[var(--bg)]">Phaser</span>
+                </div>
                 <h3 className="font-['Inter_Tight',system-ui,sans-serif] text-base font-bold tracking-[-0.025em]">
                   Früher oder Später
                 </h3>
+                <p className="mt-1 text-[0.85rem] leading-snug text-[var(--muted)]">
+                  Ein Online-Kartenspiel über Prokrastination mit 2 Player Local Co-Op.
+                </p>
               </div>
               <a
                 className="absolute inset-0 grid place-items-center bg-[rgb(0_0_0_/_0.32)] text-[0.85rem] font-bold text-white opacity-0 no-underline transition-opacity duration-300 after:content-['_→'] group-hover:opacity-100"
@@ -62,12 +70,18 @@ export default function Home() {
                 loading="lazy"
               />
               <div className="pt-3">
-                <p className="mb-1 text-[0.72rem] font-semibold tracking-[0.04em] text-[var(--muted)]">
-                  Social Web App / React + Supabase
-                </p>
+                <div className="mb-2 flex flex-wrap gap-1.5">
+                  <span className="rounded-full border border-[var(--line)] px-2 py-0.5 text-[0.65rem] font-medium text-[rgb(17_17_17_/_0.72)] bg-[var(--bg)]">Community Database</span>
+                  <span className="flex items-center gap-1 rounded-full border border-[var(--line)] px-2 py-0.5 text-[0.65rem] font-medium text-[rgb(17_17_17_/_0.72)] bg-[var(--bg)]"><i className="devicon-react-original colored"></i> React</span>
+                  <span className="rounded-full border border-[var(--line)] px-2 py-0.5 text-[0.65rem] font-medium text-[rgb(17_17_17_/_0.72)] bg-[var(--bg)]">Supabase</span>
+                  <span className="rounded-full border border-[var(--line)] px-2 py-0.5 text-[0.65rem] font-medium text-[rgb(17_17_17_/_0.72)] bg-[var(--bg)]">Vercel</span>
+                </div>
                 <h3 className="font-['Inter_Tight',system-ui,sans-serif] text-base font-bold tracking-[-0.025em]">
                   CliqueBase
                 </h3>
+                <p className="mt-1 text-[0.85rem] leading-snug text-[var(--muted)]">
+                  Eine Datenbank für die Auslagerung von Gruppenchats - füge Filme, Videos, Bücher als Vorschläge in deiner Clique hinzu
+                </p>
               </div>
               <a
                 className="absolute inset-0 grid place-items-center bg-[rgb(0_0_0_/_0.32)] text-[0.85rem] font-bold text-white opacity-0 no-underline transition-opacity duration-300 after:content-['_→'] group-hover:opacity-100"
@@ -88,9 +102,9 @@ export default function Home() {
         >
           <h2
             id="projects-id-heading"
-            className="mb-2 font-['Inter_Tight',system-ui,sans-serif] text-[clamp(1.5rem,3vw,2.25rem)] font-bold leading-none tracking-[-0.055em]"
+            className="mb-2 flex items-center gap-3 font-['Inter_Tight',system-ui,sans-serif] text-[clamp(1.5rem,3vw,2.25rem)] font-bold leading-none tracking-[-0.055em]"
           >
-            Industrial Design
+            Industrial Design <Hammer className="text-[var(--muted)]" size={32} strokeWidth={1.5} />
           </h2>
 
           <p className="max-w-[560px] text-[0.95rem] text-[var(--muted)]">
@@ -117,12 +131,12 @@ export default function Home() {
                   DONDA stick
                 </h3>
               </div>
-              <a
+              <Link
                 className="absolute inset-0 grid place-items-center bg-[rgb(0_0_0_/_0.32)] text-[0.85rem] font-bold text-white opacity-0 no-underline transition-opacity duration-300 after:content-['_→'] group-hover:opacity-100"
-                href="projects/project-01.html"
+                to="/projects/project-01"
               >
                 View project
-              </a>
+              </Link>
             </article>
 
             <article className="group relative overflow-hidden bg-transparent">
@@ -140,12 +154,12 @@ export default function Home() {
                   Mixed Reality Model
                 </h3>
               </div>
-              <a
+              <Link
                 className="absolute inset-0 grid place-items-center bg-[rgb(0_0_0_/_0.32)] text-[0.85rem] font-bold text-white opacity-0 no-underline transition-opacity duration-300 after:content-['_→'] group-hover:opacity-100"
-                href="projects/project-02.html"
+                to="/projects/project-02"
               >
                 View project
-              </a>
+              </Link>
             </article>
 
             <article className="group relative overflow-hidden bg-transparent">
@@ -163,12 +177,12 @@ export default function Home() {
                   Figuren
                 </h3>
               </div>
-              <a
+              <Link
                 className="absolute inset-0 grid place-items-center bg-[rgb(0_0_0_/_0.32)] text-[0.85rem] font-bold text-white opacity-0 no-underline transition-opacity duration-300 after:content-['_→'] group-hover:opacity-100"
-                href="projects/project-03.html"
+                to="/projects/project-03"
               >
                 View project
-              </a>
+              </Link>
             </article>
 
             <article className="group relative overflow-hidden bg-transparent">
@@ -186,12 +200,12 @@ export default function Home() {
                   Bachelor Project
                 </h3>
               </div>
-              <a
+              <Link
                 className="absolute inset-0 grid place-items-center bg-[rgb(0_0_0_/_0.32)] text-[0.85rem] font-bold text-white opacity-0 no-underline transition-opacity duration-300 after:content-['_→'] group-hover:opacity-100"
-                href="projects/project-04.html"
+                to="/projects/project-04"
               >
                 View project
-              </a>
+              </Link>
             </article>
 
             <article className="group relative overflow-hidden bg-transparent">
@@ -214,12 +228,12 @@ export default function Home() {
                   Clothes
                 </h3>
               </div>
-              <a
+              <Link
                 className="absolute inset-0 grid place-items-center bg-[rgb(0_0_0_/_0.32)] text-[0.85rem] font-bold text-white opacity-0 no-underline transition-opacity duration-300 after:content-['_→'] group-hover:opacity-100"
-                href="./clothes.html"
+                to="/clothes"
               >
                 View project
-              </a>
+              </Link>
             </article>
           </div>
         </section>
