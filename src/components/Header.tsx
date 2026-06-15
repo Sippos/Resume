@@ -3,17 +3,22 @@ import { useState } from 'react'
 
 const KineticTextReveal = ({ text, hoverText }: { text: string, hoverText?: string }) => {
   const [isHovered, setIsHovered] = useState(false)
-  const displayText = isHovered && hoverText ? hoverText : text
+  const hasHoverText = !!hoverText
+
   return (
     <motion.span
-      initial="hidden"
-      animate="visible"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className="inline-block relative cursor-default transition-colors duration-300 hover:text-[#244f57]"
+      className="inline-block relative cursor-default"
+      initial="hidden"
+      animate="visible"
     >
-      <motion.span className="inline-block">
-        {displayText.split(' ').map((word, wordIndex) => (
+      {/* Primary Text Layer */}
+      <motion.span 
+        className="inline-block"
+        animate={isHovered && hasHoverText ? "hoverExit" : "visible"}
+      >
+        {text.split(' ').map((word, wordIndex) => (
           <span key={wordIndex} className="inline-block whitespace-nowrap mr-[0.25em] last:mr-0">
             {word.split('').map((char, i) => (
               <motion.span
@@ -29,9 +34,20 @@ const KineticTextReveal = ({ text, hoverText }: { text: string, hoverText?: stri
                       ease: [0.22, 1, 0.36, 1],
                       delay: wordIndex * 0.1 + i * 0.03
                     }
+                  },
+                  hoverExit: {
+                    opacity: 0,
+                    y: -20,
+                    filter: 'blur(4px)',
+                    transition: {
+                      duration: 0.4,
+                      ease: [0.22, 1, 0.36, 1],
+                      delay: i * 0.02
+                    }
                   }
                 }}
-                className="inline-block"
+                className="inline-block transition-colors duration-300"
+                style={{ color: isHovered && hasHoverText ? '#244f57' : 'inherit' }}
               >
                 {char}
               </motion.span>
@@ -39,6 +55,40 @@ const KineticTextReveal = ({ text, hoverText }: { text: string, hoverText?: stri
           </span>
         ))}
       </motion.span>
+
+      {/* Hover Text Layer */}
+      {hasHoverText && (
+        <motion.span 
+          className="absolute inset-0 inline-block pointer-events-none"
+          animate={isHovered ? "hoverEnter" : "hidden"}
+        >
+          {hoverText.split(' ').map((word, wordIndex) => (
+            <span key={wordIndex} className="inline-block whitespace-nowrap mr-[0.25em] last:mr-0">
+              {word.split('').map((char, i) => (
+                <motion.span
+                  key={i}
+                  variants={{
+                    hidden: { opacity: 0, y: 20, filter: 'blur(4px)' },
+                    hoverEnter: { 
+                      opacity: 1, 
+                      y: 0, 
+                      filter: 'blur(0px)',
+                      transition: {
+                        duration: 0.6,
+                        ease: [0.22, 1, 0.36, 1],
+                        delay: i * 0.03
+                      }
+                    }
+                  }}
+                  className="inline-block text-[#244f57]"
+                >
+                  {char}
+                </motion.span>
+              ))}
+            </span>
+          ))}
+        </motion.span>
+      )}
     </motion.span>
   )
 }
