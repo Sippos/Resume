@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { useState, useEffect, useRef } from 'react'
+import { useState } from 'react'
 
 const KineticTextReveal = ({ text, hoverText, forceHover }: { text: string, hoverText?: string, forceHover?: boolean }) => {
   const [isHoveredInternal, setIsHoveredInternal] = useState(false)
@@ -98,15 +98,6 @@ import Navbar from './Navbar'
 
 export default function Header() {
   const [isHeadlineHovered, setIsHeadlineHovered] = useState(false)
-  const videoRef = useRef<HTMLVideoElement>(null)
-
-  useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.defaultMuted = true
-      videoRef.current.muted = true
-      videoRef.current.play().catch((e) => console.log("Autoplay failed:", e))
-    }
-  }, [])
 
   return (
     <>
@@ -120,14 +111,20 @@ export default function Header() {
       <Navbar />
 
       <header className="relative mx-auto max-w-[1240px] border-b border-[var(--line)] px-[clamp(1rem,5vw,3rem)] py-[clamp(1.5rem,4vw,3rem)] overflow-hidden md:overflow-visible">
-        <video
-          ref={videoRef}
-          src="assets/figuren/WebsiteIntro_bg.mp4"
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute bottom-0 -right-10 md:-right-24 lg:-right-32 h-[100%] max-h-[240px] md:max-h-[280px] w-auto object-contain pointer-events-none z-10"
+        <div
+          className="absolute bottom-0 -right-10 md:-right-24 lg:-right-32 h-[100%] max-h-[240px] md:max-h-[280px] w-auto pointer-events-none z-10"
+          dangerouslySetInnerHTML={{
+            __html: `
+              <video
+                src="assets/figuren/WebsiteIntro_bg.mp4"
+                autoplay
+                loop
+                muted
+                playsinline
+                style="height: 100%; width: 100%; object-fit: contain;"
+              ></video>
+            `
+          }}
         />
         <div className="relative z-20 max-w-[960px]">
           <p className="mb-4 text-[0.78rem] font-semibold uppercase tracking-[0.08em] text-[var(--muted)] m-0">
