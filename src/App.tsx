@@ -4,6 +4,7 @@ import Project01 from './pages/Project01'
 import Project02 from './pages/Project02'
 import Project03 from './pages/Project03'
 import Project04 from './pages/Project04'
+import Project05 from './pages/Project05'
 import Clothes from './pages/Clothes'
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <Route path="/projects/project-02" element={<Project02 />} />
       <Route path="/projects/project-03" element={<Project03 />} />
       <Route path="/projects/project-04" element={<Project04 />} />
+      <Route path="/projects/project-05" element={<Project05 />} />
       <Route path="/clothes" element={<Clothes />} />
     </Routes>
   )
