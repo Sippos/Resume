@@ -1,30 +1,29 @@
 import { motion } from 'framer-motion'
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useState } from 'react'
 
-const AnimatedLine = ({ text }: { text: string }) => {
+const KineticTextReveal = ({ text }: { text: string }) => {
   return (
     <motion.span
-      initial="initial"
-      whileHover="hover"
+      initial="hidden"
+      animate="visible"
       className="inline-block relative cursor-default"
     >
-      <motion.span
-        variants={{
-          hover: { transition: { staggerChildren: 0.03 } }
-        }}
-        className="inline-block"
-      >
+      <motion.span className="inline-block">
         {text.split(' ').map((word, wordIndex) => (
           <span key={wordIndex} className="inline-block whitespace-nowrap mr-[0.25em] last:mr-0">
             {word.split('').map((char, i) => (
               <motion.span
                 key={i}
                 variants={{
-                  initial: { y: 0, color: 'var(--ink)' },
-                  hover: { y: -8, color: '#244f57' }
+                  hidden: { opacity: 0, y: 20, filter: 'blur(6px)' },
+                  visible: { opacity: 1, y: 0, filter: 'blur(0px)' }
                 }}
-                transition={{ type: 'spring', stiffness: 500, damping: 12 }}
-                className="inline-block transition-colors duration-200"
+                transition={{
+                  duration: 0.8,
+                  ease: [0.22, 1, 0.36, 1],
+                  delay: wordIndex * 0.1 + i * 0.03
+                }}
+                className="inline-block transition-colors duration-200 hover:text-[#244f57]"
               >
                 {char}
               </motion.span>
@@ -37,15 +36,9 @@ const AnimatedLine = ({ text }: { text: string }) => {
 }
 
 export default function Header() {
-  const videoRef = useRef<HTMLVideoElement>(null)
   const [activeSection, setActiveSection] = useState<string>('')
 
   useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.defaultMuted = true
-      videoRef.current.muted = true
-      videoRef.current.play().catch(e => console.log("Autoplay prevented:", e))
-    }
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -89,7 +82,7 @@ export default function Header() {
           className="font-['Inter_Tight',system-ui,sans-serif] text-base font-extrabold tracking-[-0.04em] no-underline w-full sm:w-auto text-center sm:text-left"
           href="#"
         >
-          S BvL
+          $IP BvL
         </a>
 
         <ul className="flex list-none flex-wrap justify-center sm:justify-end gap-x-[1.1rem] gap-y-[0.45rem] m-0 p-0">
@@ -114,12 +107,9 @@ export default function Header() {
       </nav>
 
       <header className="relative mx-auto max-w-[1240px] border-b border-[var(--line)] px-[clamp(1rem,5vw,3rem)] py-[clamp(1.5rem,4vw,3rem)] overflow-hidden md:overflow-visible">
-        <video
-          ref={videoRef}
-          src="assets/figuren/WebsiteIntro.webm"
-          autoPlay
-          muted
-          playsInline
+        <img
+          src="assets/figuren/WebSiteIntroWEBP.webp"
+          alt="Website Intro Animation"
           className="absolute bottom-0 -right-10 md:-right-24 lg:-right-32 h-[100%] max-h-[240px] md:max-h-[280px] w-auto object-contain pointer-events-none z-10 drop-shadow-xl"
         />
         <div className="relative z-20 max-w-[960px]">
@@ -129,10 +119,10 @@ export default function Header() {
 
           <h1
             className="max-w-[13ch] font-['Inter_Tight',system-ui,sans-serif] text-[clamp(2.5rem,10vw,8.5rem)] font-bold leading-[0.88] tracking-[-0.085em] m-0 mt-2"
-            aria-label="Sebastian Berger von Lengercke"
+            aria-label="$IP Berger von Lengercke"
           >
-            <AnimatedLine text="Sebastian Berger" />
-            <AnimatedLine text="von Lengercke" />
+            <KineticTextReveal text="$IP Berger" />
+            <KineticTextReveal text="von Lengercke" />
           </h1>
 
           <div className="mt-[1.35rem] flex items-center gap-4">
