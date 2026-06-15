@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
+import { ChevronDown } from 'lucide-react'
 
 export default function Navbar() {
   const [activeSection, setActiveSection] = useState<string>('')
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false)
   const location = useLocation()
   const isHome = location.pathname === '/'
 
@@ -44,19 +46,66 @@ export default function Navbar() {
     { name: 'Contact', href: 'contact' },
   ]
 
+  const activeLinkName = navLinks.find((link) => link.href === activeSection)?.name || 'Menu'
+
   return (
     <nav
-      className="sticky top-0 z-[1000] flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-8 border-b border-[var(--soft-line)] bg-[rgb(244_242_237_/_0.82)] px-[clamp(1rem,5vw,3rem)] py-4 backdrop-blur-[18px]"
+      className="sticky top-0 z-[1000] flex items-center justify-between border-b border-[var(--soft-line)] bg-[rgb(244_242_237_/_0.82)] px-[clamp(1rem,5vw,3rem)] py-4 backdrop-blur-[18px]"
       aria-label="Main navigation"
     >
       <Link
         to="/"
-        className="font-['Inter_Tight',system-ui,sans-serif] text-base font-extrabold tracking-[-0.04em] no-underline w-full sm:w-auto text-center sm:text-left text-[var(--ink)]"
+        className="font-['Inter_Tight',system-ui,sans-serif] text-base font-extrabold tracking-[-0.04em] no-underline text-[var(--ink)]"
       >
         $IP BvL
       </Link>
 
-      <ul className="flex list-none flex-wrap justify-center sm:justify-end gap-x-[1.1rem] gap-y-[0.45rem] m-0 p-0">
+      {/* Mobile Navigation */}
+      <div className="relative sm:hidden">
+        <button 
+          onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+          className="flex items-center gap-1.5 text-[0.85rem] font-bold text-[var(--ink)]"
+        >
+          {activeLinkName}
+          <ChevronDown size={16} className={`transition-transform ${isDropdownOpen ? 'rotate-180' : ''}`} />
+        </button>
+        
+        {isDropdownOpen && (
+          <ul className="absolute right-0 top-full mt-3 w-48 list-none flex flex-col gap-1 rounded-xl border border-[var(--line)] bg-[rgb(244_242_237)] p-2 shadow-lg m-0">
+            {navLinks.map((link) => {
+              const isActive = isHome && activeSection === link.href
+              return (
+                <li key={link.name}>
+                  {isHome ? (
+                    <a
+                      onClick={() => setIsDropdownOpen(false)}
+                      className={`block rounded-lg px-4 py-2 text-[0.82rem] transition-colors ${
+                        isActive
+                          ? 'bg-[var(--ink)] text-white font-bold'
+                          : 'font-semibold text-[rgb(17_17_17_/_0.62)] hover:bg-[rgb(17_17_17_/_0.05)] hover:text-[var(--ink)]'
+                      } no-underline`}
+                      href={`#${link.href}`}
+                    >
+                      {link.name}
+                    </a>
+                  ) : (
+                    <Link
+                      onClick={() => setIsDropdownOpen(false)}
+                      className="block rounded-lg px-4 py-2 text-[0.82rem] transition-colors font-semibold text-[rgb(17_17_17_/_0.62)] hover:bg-[rgb(17_17_17_/_0.05)] hover:text-[var(--ink)] no-underline"
+                      to={`/#${link.href}`}
+                    >
+                      {link.name}
+                    </Link>
+                  )}
+                </li>
+              )
+            })}
+          </ul>
+        )}
+      </div>
+
+      {/* Desktop Navigation */}
+      <ul className="hidden sm:flex list-none flex-wrap justify-end gap-x-[1.1rem] gap-y-[0.45rem] m-0 p-0">
         {navLinks.map((link) => {
           const isActive = isHome && activeSection === link.href
           return (

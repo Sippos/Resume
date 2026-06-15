@@ -136,7 +136,7 @@ export default function Header() {
           loop
           muted
           playsInline
-          className="absolute bottom-0 -right-10 md:-right-24 lg:-right-32 h-[100%] max-h-[240px] md:max-h-[280px] w-auto object-contain z-10"
+          className="absolute bottom-0 -right-4 sm:-right-10 md:-right-24 lg:-right-32 h-[100%] max-h-[180px] sm:max-h-[240px] md:max-h-[280px] w-auto object-contain z-10"
         />
         <div className="relative z-20 max-w-[960px]">
           <p className="mb-4 text-[0.78rem] font-semibold uppercase tracking-[0.08em] text-[var(--muted)] m-0">
