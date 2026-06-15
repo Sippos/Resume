@@ -114,7 +114,7 @@ export default function Header() {
           autoPlay
           muted
           playsInline
-          className="absolute bottom-0 -right-[2%] md:-right-[8%] h-[100%] max-h-[380px] w-auto object-contain pointer-events-none z-10 drop-shadow-xl"
+          className="absolute bottom-0 -right-10 md:-right-24 lg:-right-32 h-[100%] max-h-[240px] md:max-h-[280px] w-auto object-contain pointer-events-none z-10 drop-shadow-xl"
         />
         <div className="relative z-20 max-w-[960px]">
           <p className="mb-4 text-[0.78rem] font-semibold uppercase tracking-[0.08em] text-[var(--muted)] m-0">
