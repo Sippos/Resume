@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 const AnimatedLine = ({ text }: { text: string }) => {
   return (
@@ -38,6 +38,7 @@ const AnimatedLine = ({ text }: { text: string }) => {
 
 export default function Header() {
   const videoRef = useRef<HTMLVideoElement>(null)
+  const [activeSection, setActiveSection] = useState<string>('')
 
   useEffect(() => {
     if (videoRef.current) {
@@ -45,7 +46,31 @@ export default function Header() {
       videoRef.current.muted = true
       videoRef.current.play().catch(e => console.log("Autoplay prevented:", e))
     }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id)
+          }
+        })
+      },
+      { rootMargin: '-20% 0px -70% 0px' }
+    )
+
+    const sections = document.querySelectorAll('section[id]')
+    sections.forEach((section) => observer.observe(section))
+
+    return () => observer.disconnect()
   }, [])
+
+  const navLinks = [
+    { name: 'Projects', href: '#projects-software' },
+    { name: 'Über mich', href: '#about' },
+    { name: 'Erfahrung', href: '#experience' },
+    { name: 'Skills', href: '#skills' },
+    { name: 'Contact', href: '#contact' },
+  ]
 
   return (
     <>
@@ -68,46 +93,23 @@ export default function Header() {
         </a>
 
         <ul className="flex list-none flex-wrap justify-center sm:justify-end gap-x-[1.1rem] gap-y-[0.45rem] m-0 p-0">
-          <li>
-            <a
-              className="text-[0.82rem] font-semibold text-[rgb(17_17_17_/_0.62)] no-underline hover:text-[var(--ink)] transition-colors"
-              href="#projects-software"
-            >
-              Projects
-            </a>
-          </li>
-          <li>
-            <a
-              className="text-[0.82rem] font-semibold text-[rgb(17_17_17_/_0.62)] no-underline hover:text-[var(--ink)] transition-colors"
-              href="#about"
-            >
-              Über mich
-            </a>
-          </li>
-          <li>
-            <a
-              className="text-[0.82rem] font-semibold text-[rgb(17_17_17_/_0.62)] no-underline hover:text-[var(--ink)] transition-colors"
-              href="#experience"
-            >
-              Erfahrung
-            </a>
-          </li>
-          <li>
-            <a
-              className="text-[0.82rem] font-semibold text-[rgb(17_17_17_/_0.62)] no-underline hover:text-[var(--ink)] transition-colors"
-              href="#skills"
-            >
-              Skills
-            </a>
-          </li>
-          <li>
-            <a
-              className="text-[0.82rem] font-semibold text-[rgb(17_17_17_/_0.62)] no-underline hover:text-[var(--ink)] transition-colors"
-              href="#contact"
-            >
-              Contact
-            </a>
-          </li>
+          {navLinks.map((link) => {
+            const isActive = activeSection === link.href.substring(1)
+            return (
+              <li key={link.name}>
+                <a
+                  className={`text-[0.82rem] transition-colors ${
+                    isActive
+                      ? 'font-extrabold text-[var(--ink)] drop-shadow-sm scale-105 inline-block'
+                      : 'font-semibold text-[rgb(17_17_17_/_0.62)] hover:text-[var(--ink)]'
+                  } no-underline`}
+                  href={link.href}
+                >
+                  {link.name}
+                </a>
+              </li>
+            )
+          })}
         </ul>
       </nav>
 
