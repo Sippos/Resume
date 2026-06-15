@@ -6,9 +6,13 @@ const KineticTextReveal = ({ text }: { text: string }) => {
     <motion.span
       initial="hidden"
       animate="visible"
+      whileHover="hover"
       className="inline-block relative cursor-default"
     >
-      <motion.span className="inline-block">
+      <motion.span 
+        variants={{ hover: { transition: { staggerChildren: 0.03 } } }}
+        className="inline-block"
+      >
         {text.split(' ').map((word, wordIndex) => (
           <span key={wordIndex} className="inline-block whitespace-nowrap mr-[0.25em] last:mr-0">
             {word.split('').map((char, i) => (
@@ -16,14 +20,23 @@ const KineticTextReveal = ({ text }: { text: string }) => {
                 key={i}
                 variants={{
                   hidden: { opacity: 0, y: 20, filter: 'blur(6px)' },
-                  visible: { opacity: 1, y: 0, filter: 'blur(0px)' }
+                  visible: { 
+                    opacity: 1, 
+                    y: 0, 
+                    filter: 'blur(0px)',
+                    transition: {
+                      duration: 0.8,
+                      ease: [0.22, 1, 0.36, 1],
+                      delay: wordIndex * 0.1 + i * 0.03
+                    }
+                  },
+                  hover: { 
+                    y: -8, 
+                    color: '#244f57',
+                    transition: { type: 'spring', stiffness: 500, damping: 12 }
+                  }
                 }}
-                transition={{
-                  duration: 0.8,
-                  ease: [0.22, 1, 0.36, 1],
-                  delay: wordIndex * 0.1 + i * 0.03
-                }}
-                className="inline-block transition-colors duration-200 hover:text-[#244f57]"
+                className="inline-block transition-colors duration-200"
               >
                 {char}
               </motion.span>
