@@ -1,14 +1,15 @@
 import { motion } from 'framer-motion'
 import { useState } from 'react'
 
-const KineticTextReveal = ({ text, hoverText }: { text: string, hoverText?: string }) => {
-  const [isHovered, setIsHovered] = useState(false)
+const KineticTextReveal = ({ text, hoverText, forceHover }: { text: string, hoverText?: string, forceHover?: boolean }) => {
+  const [isHoveredInternal, setIsHoveredInternal] = useState(false)
+  const isHovered = forceHover !== undefined ? forceHover : isHoveredInternal
   const hasHoverText = !!hoverText
 
   return (
     <motion.span
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
+      onMouseEnter={() => setIsHoveredInternal(true)}
+      onMouseLeave={() => setIsHoveredInternal(false)}
       className="inline-block relative cursor-default"
       initial="hidden"
       animate="visible"
@@ -96,6 +97,8 @@ const KineticTextReveal = ({ text, hoverText }: { text: string, hoverText?: stri
 import Navbar from './Navbar'
 
 export default function Header() {
+  const [isHeadlineHovered, setIsHeadlineHovered] = useState(false)
+
   return (
     <>
       <a
@@ -121,14 +124,16 @@ export default function Header() {
           <h1
             className="max-w-[13ch] font-['Inter_Tight',system-ui,sans-serif] text-[clamp(2.5rem,10vw,8.5rem)] font-bold leading-[0.88] tracking-[-0.085em] m-0 mt-2"
             aria-label="$IP Berger von Lengercke"
+            onMouseEnter={() => setIsHeadlineHovered(true)}
+            onMouseLeave={() => setIsHeadlineHovered(false)}
           >
             <div>
               <span className="inline-block mr-[0.25em]">
-                <KineticTextReveal text="Sebastian" hoverText="$IP" />
+                <KineticTextReveal text="Sebastian" hoverText="$IP" forceHover={isHeadlineHovered} />
               </span>
-              <KineticTextReveal text="Berger" />
+              <KineticTextReveal text="Berger" hoverText="Berger" forceHover={isHeadlineHovered} />
             </div>
-            <KineticTextReveal text="von Lengercke" />
+            <KineticTextReveal text="von Lengercke" hoverText="von Lengercke" forceHover={isHeadlineHovered} />
           </h1>
 
           <div className="mt-[1.35rem] flex items-center gap-4">
