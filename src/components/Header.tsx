@@ -122,7 +122,12 @@ export default function Header() {
             className="max-w-[13ch] font-['Inter_Tight',system-ui,sans-serif] text-[clamp(2.5rem,10vw,8.5rem)] font-bold leading-[0.88] tracking-[-0.085em] m-0 mt-2"
             aria-label="$IP Berger von Lengercke"
           >
-            <KineticTextReveal text="Sebastian Berger" hoverText="$IP Berger" />
+            <div>
+              <span className="inline-block mr-[0.25em]">
+                <KineticTextReveal text="Sebastian" hoverText="$IP" />
+              </span>
+              <KineticTextReveal text="Berger" />
+            </div>
             <KineticTextReveal text="von Lengercke" />
           </h1>
 
