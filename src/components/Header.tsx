@@ -6,26 +6,30 @@ const AnimatedLine = ({ text }: { text: string }) => {
     <motion.span
       initial="initial"
       whileHover="hover"
-      className="block relative cursor-default"
+      className="inline-block relative cursor-default"
     >
       <motion.span
         variants={{
           hover: { transition: { staggerChildren: 0.03 } }
         }}
-        className="block"
+        className="inline-block"
       >
-        {text.split('').map((char, i) => (
-          <motion.span
-            key={i}
-            variants={{
-              initial: { y: 0, color: 'var(--ink)' },
-              hover: { y: -8, color: '#244f57' }
-            }}
-            transition={{ type: 'spring', stiffness: 500, damping: 12 }}
-            className="inline-block transition-colors duration-200"
-          >
-            {char === ' ' ? '\u00A0' : char}
-          </motion.span>
+        {text.split(' ').map((word, wordIndex) => (
+          <span key={wordIndex} className="inline-block whitespace-nowrap mr-[0.25em] last:mr-0">
+            {word.split('').map((char, i) => (
+              <motion.span
+                key={i}
+                variants={{
+                  initial: { y: 0, color: 'var(--ink)' },
+                  hover: { y: -8, color: '#244f57' }
+                }}
+                transition={{ type: 'spring', stiffness: 500, damping: 12 }}
+                className="inline-block transition-colors duration-200"
+              >
+                {char}
+              </motion.span>
+            ))}
+          </span>
         ))}
       </motion.span>
     </motion.span>
@@ -53,17 +57,17 @@ export default function Header() {
       </a>
 
       <nav
-        className="sticky top-0 z-[1000] flex items-center justify-between gap-8 border-b border-[var(--soft-line)] bg-[rgb(244_242_237_/_0.82)] px-[clamp(1rem,5vw,3rem)] py-4 backdrop-blur-[18px]"
+        className="sticky top-0 z-[1000] flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-8 border-b border-[var(--soft-line)] bg-[rgb(244_242_237_/_0.82)] px-[clamp(1rem,5vw,3rem)] py-4 backdrop-blur-[18px]"
         aria-label="Main navigation"
       >
         <a
-          className="font-['Inter_Tight',system-ui,sans-serif] text-base font-extrabold tracking-[-0.04em] no-underline"
+          className="font-['Inter_Tight',system-ui,sans-serif] text-base font-extrabold tracking-[-0.04em] no-underline w-full sm:w-auto text-center sm:text-left"
           href="#"
         >
           S BvL
         </a>
 
-        <ul className="flex list-none flex-wrap justify-end gap-x-[1.1rem] gap-y-[0.45rem] m-0 p-0">
+        <ul className="flex list-none flex-wrap justify-center sm:justify-end gap-x-[1.1rem] gap-y-[0.45rem] m-0 p-0">
           <li>
             <a
               className="text-[0.82rem] font-semibold text-[rgb(17_17_17_/_0.62)] no-underline hover:text-[var(--ink)] transition-colors"
@@ -122,7 +126,7 @@ export default function Header() {
           </p>
 
           <h1
-            className="max-w-[13ch] font-['Inter_Tight',system-ui,sans-serif] text-[clamp(3.6rem,10vw,8.5rem)] font-bold leading-[0.88] tracking-[-0.085em] m-0 mt-2"
+            className="max-w-[13ch] font-['Inter_Tight',system-ui,sans-serif] text-[clamp(2.5rem,10vw,8.5rem)] font-bold leading-[0.88] tracking-[-0.085em] m-0 mt-2"
             aria-label="Sebastian Berger von Lengercke"
           >
             <AnimatedLine text="Sebastian Berger" />
