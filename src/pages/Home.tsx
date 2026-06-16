@@ -119,21 +119,21 @@ export default function Home() {
             <article className="group relative overflow-hidden bg-transparent">
               <img
                 className="block aspect-[4/3] w-full bg-[rgb(17_17_17_/_0.06)] object-cover transition duration-500 ease-out group-hover:scale-[1.025] group-hover:brightness-[0.88]"
-                src="assets/donda-stick/cover.png"
-                alt="Cover image for DONDA stick"
+                src="assets/DFKI_nature_robots/cover.jpg"
+                alt="Cover image for Lero 2 Roboter"
                 loading="lazy"
               />
               <div className="pt-3">
                 <p className="mb-1 text-[0.72rem] font-semibold tracking-[0.04em] text-[var(--muted)]">
-                  Industrial Design / Concept
+                  DFKI / nature robots
                 </p>
                 <h3 className="font-['Inter_Tight',system-ui,sans-serif] text-base font-bold tracking-[-0.025em]">
-                  DONDA stick
+                  Lero 2 Roboter
                 </h3>
               </div>
               <Link
                 className="absolute inset-0 grid place-items-center bg-[rgb(0_0_0_/_0.32)] text-[0.85rem] font-bold text-white opacity-0 no-underline transition-opacity duration-300 after:content-['_→'] group-hover:opacity-100"
-                to="/projects/project-01"
+                to="/projects/project-05"
               >
                 View project
               </Link>
@@ -165,29 +165,6 @@ export default function Home() {
             <article className="group relative overflow-hidden bg-transparent">
               <img
                 className="block aspect-[4/3] w-full bg-[rgb(17_17_17_/_0.06)] object-cover transition duration-500 ease-out group-hover:scale-[1.025] group-hover:brightness-[0.88]"
-                src="assets/figuren/cover.png"
-                alt="Cover image for Figuren"
-                loading="lazy"
-              />
-              <div className="pt-3">
-                <p className="mb-1 text-[0.72rem] font-semibold tracking-[0.04em] text-[var(--muted)]">
-                  3D / CAD / Rendering
-                </p>
-                <h3 className="font-['Inter_Tight',system-ui,sans-serif] text-base font-bold tracking-[-0.025em]">
-                  Figuren
-                </h3>
-              </div>
-              <Link
-                className="absolute inset-0 grid place-items-center bg-[rgb(0_0_0_/_0.32)] text-[0.85rem] font-bold text-white opacity-0 no-underline transition-opacity duration-300 after:content-['_→'] group-hover:opacity-100"
-                to="/projects/project-03"
-              >
-                View project
-              </Link>
-            </article>
-
-            <article className="group relative overflow-hidden bg-transparent">
-              <img
-                className="block aspect-[4/3] w-full bg-[rgb(17_17_17_/_0.06)] object-cover transition duration-500 ease-out group-hover:scale-[1.025] group-hover:brightness-[0.88]"
                 src="assets/revive/cover.png"
                 alt="Cover image for Bachelor Project"
                 loading="lazy"
@@ -211,21 +188,44 @@ export default function Home() {
             <article className="group relative overflow-hidden bg-transparent">
               <img
                 className="block aspect-[4/3] w-full bg-[rgb(17_17_17_/_0.06)] object-cover transition duration-500 ease-out group-hover:scale-[1.025] group-hover:brightness-[0.88]"
-                src="assets/DFKI_nature_robots/cover.jpg"
-                alt="Cover image for Lero 2 Roboter"
+                src="assets/donda-stick/cover.png"
+                alt="Cover image for DONDA stick"
                 loading="lazy"
               />
               <div className="pt-3">
                 <p className="mb-1 text-[0.72rem] font-semibold tracking-[0.04em] text-[var(--muted)]">
-                  DFKI / nature robots
+                  Industrial Design / Concept
                 </p>
                 <h3 className="font-['Inter_Tight',system-ui,sans-serif] text-base font-bold tracking-[-0.025em]">
-                  Lero 2 Roboter
+                  DONDA stick
                 </h3>
               </div>
               <Link
                 className="absolute inset-0 grid place-items-center bg-[rgb(0_0_0_/_0.32)] text-[0.85rem] font-bold text-white opacity-0 no-underline transition-opacity duration-300 after:content-['_→'] group-hover:opacity-100"
-                to="/projects/project-05"
+                to="/projects/project-01"
+              >
+                View project
+              </Link>
+            </article>
+
+            <article className="group relative overflow-hidden bg-transparent">
+              <img
+                className="block aspect-[4/3] w-full bg-[rgb(17_17_17_/_0.06)] object-cover transition duration-500 ease-out group-hover:scale-[1.025] group-hover:brightness-[0.88]"
+                src="assets/figuren/cover.png"
+                alt="Cover image for Figuren"
+                loading="lazy"
+              />
+              <div className="pt-3">
+                <p className="mb-1 text-[0.72rem] font-semibold tracking-[0.04em] text-[var(--muted)]">
+                  3D / CAD / Rendering
+                </p>
+                <h3 className="font-['Inter_Tight',system-ui,sans-serif] text-base font-bold tracking-[-0.025em]">
+                  Figuren
+                </h3>
+              </div>
+              <Link
+                className="absolute inset-0 grid place-items-center bg-[rgb(0_0_0_/_0.32)] text-[0.85rem] font-bold text-white opacity-0 no-underline transition-opacity duration-300 after:content-['_→'] group-hover:opacity-100"
+                to="/projects/project-03"
               >
                 View project
               </Link>
@@ -234,7 +234,7 @@ export default function Home() {
             <article className="group relative overflow-hidden bg-transparent">
               <video
                 className="block aspect-[4/3] w-full bg-[rgb(17_17_17_/_0.06)] object-contain transition duration-500 ease-out group-hover:scale-[1.025] group-hover:brightness-[0.88]"
-                src="./assets/clothes/cover.webm"
+                src="./assets/clothes/cover.mp4"
                 autoPlay
                 muted
                 loop
@@ -253,7 +253,7 @@ export default function Home() {
               </div>
               <Link
                 className="absolute inset-0 grid place-items-center bg-[rgb(0_0_0_/_0.32)] text-[0.85rem] font-bold text-white opacity-0 no-underline transition-opacity duration-300 after:content-['_→'] group-hover:opacity-100"
-                to="/clothes"
+                to="/projects/project-06"
               >
                 View project
               </Link>
