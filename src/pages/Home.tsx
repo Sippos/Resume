@@ -294,10 +294,11 @@ export default function Home() {
                 <h3 className="font-['Inter_Tight',system-ui,sans-serif] text-base font-bold">
                   KI Softwareentwicklung
                 </h3>
-                <span className="whitespace-nowrap text-[0.92rem] font-medium">Apr. 2024 – Heute</span>
+                <span className="whitespace-nowrap text-[0.92rem] font-medium">2026–Heute</span>
               </div>
               <div className="flex items-baseline justify-between gap-4">
                 <p className="text-[0.92rem] text-[var(--muted)]">WBS Coding School</p>
+                <span className="whitespace-nowrap text-[0.92rem] text-[var(--muted)]">April – Heute</span>
               </div>
             </li>
             <li className="grid gap-1 border-t border-[var(--soft-line)] py-4">
@@ -312,8 +313,9 @@ export default function Home() {
                 <span className="whitespace-nowrap text-[0.92rem] text-[var(--muted)]">8 Semester</span>
               </div>
               <p className="mt-1 text-[0.92rem] text-[var(--muted)]">
-                Bachelorarbeit: Ein konzeptioneller Entwurf eines Produktes zur
-                Alltagsbewältigung von neurodivergenten Menschen. Note: 1,5
+                Bachelorarbeit: Ein konzeptioneller Entwurf eines Produktes zur<br />
+                Alltagsbewältigung von neurodivergenten Menschen.<br />
+                Note: 1,5
               </p>
             </li>
             <li className="grid gap-1 border-t border-[var(--soft-line)] py-4">
