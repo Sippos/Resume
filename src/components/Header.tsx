@@ -171,7 +171,7 @@ export default function Header() {
             </motion.figure>
 
             <p className="text-[clamp(1rem,1.7vw,1.25rem)] font-medium text-[var(--muted)] m-0">
-              Industrial Designer B.A. und upcoming Softwareentwickler
+              <KineticTextReveal text="Industrial Designer B.A. und Softwareentwickler" hoverText="FULL STACK CREATIVE TECHNOLOGIST" />
             </p>
           </div>
         </div>
