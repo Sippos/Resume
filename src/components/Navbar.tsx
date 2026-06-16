@@ -2,6 +2,15 @@ import { useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { ChevronDown } from 'lucide-react'
 
+const NAV_LINKS = [
+  { name: 'Softwareentwicklung', href: 'projects-software' },
+  { name: 'Industrie Design', href: 'projects-id' },
+  { name: 'Über mich', href: 'about' },
+  { name: 'Erfahrung', href: 'experience' },
+  { name: 'Skills', href: 'skills' },
+  { name: 'Contact', href: 'contact' },
+]
+
 export default function Navbar() {
   const [activeSection, setActiveSection] = useState<string>('')
   const [isDropdownOpen, setIsDropdownOpen] = useState(false)
@@ -29,7 +38,8 @@ export default function Navbar() {
       { rootMargin: '-20% 0px -70% 0px' }
     )
 
-    const sections = document.querySelectorAll('section[id]')
+    const targetIds = NAV_LINKS.map(l => l.href)
+    const sections = Array.from(document.querySelectorAll('section[id]')).filter(s => targetIds.includes(s.id))
     sections.forEach((section) => observer.observe(section))
 
     return () => {
@@ -48,16 +58,7 @@ export default function Navbar() {
     }
   }, [isHome, location.hash])
 
-  const navLinks = [
-    { name: 'Softwareentwicklung', href: 'projects-software' },
-    { name: 'Industrie Design', href: 'projects-id' },
-    { name: 'Über mich', href: 'about' },
-    { name: 'Erfahrung', href: 'experience' },
-    { name: 'Skills', href: 'skills' },
-    { name: 'Contact', href: 'contact' },
-  ]
-
-  const activeLinkName = navLinks.find((link) => link.href === activeSection)?.name || 'Menu'
+  const activeLinkName = NAV_LINKS.find((link) => link.href === activeSection)?.name || 'Menu'
 
   return (
     <nav
@@ -83,7 +84,7 @@ export default function Navbar() {
         
         {isDropdownOpen && (
           <ul className="absolute right-0 top-full mt-3 w-48 list-none flex flex-col gap-1 rounded-xl border border-[var(--line)] bg-[rgb(244_242_237)] p-2 shadow-lg m-0">
-            {navLinks.map((link) => {
+            {NAV_LINKS.map((link) => {
               const isActive = isHome && activeSection === link.href
               return (
                 <li key={link.name}>
@@ -117,7 +118,7 @@ export default function Navbar() {
 
       {/* Desktop Navigation */}
       <ul className="hidden sm:flex list-none flex-wrap justify-end gap-x-[1.1rem] gap-y-[0.45rem] m-0 p-0">
-        {navLinks.map((link) => {
+        {NAV_LINKS.map((link) => {
           const isActive = isHome && activeSection === link.href
           return (
             <li key={link.name}>
