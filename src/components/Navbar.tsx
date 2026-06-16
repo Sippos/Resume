@@ -90,9 +90,9 @@ export default function Navbar() {
                   {isHome ? (
                     <a
                       onClick={() => setIsDropdownOpen(false)}
-                      className={`block rounded-lg px-4 py-2 text-[0.82rem] transition-all ${
+                      className={`block rounded-lg px-4 py-2 text-[0.82rem] transition-colors ${
                         isActive
-                          ? `bg-[var(--ink)] text-white font-bold ${link.href === 'contact' ? 'shadow-[0_0_12px_var(--ink)] animate-pulse' : ''}`
+                          ? 'bg-[var(--ink)] text-white font-bold'
                           : 'font-semibold text-[rgb(17_17_17_/_0.62)] hover:bg-[rgb(17_17_17_/_0.05)] hover:text-[var(--ink)]'
                       } no-underline`}
                       href={`#${link.href}`}
@@ -123,9 +123,9 @@ export default function Navbar() {
             <li key={link.name}>
               {isHome ? (
                 <a
-                  className={`text-[0.82rem] transition-all ${
+                  className={`text-[0.82rem] transition-colors ${
                     isActive
-                      ? `font-extrabold text-[var(--ink)] scale-105 inline-block ${link.href === 'contact' ? '[text-shadow:0_0_12px_var(--ink)] animate-pulse' : 'drop-shadow-sm'}`
+                      ? 'font-extrabold text-[var(--ink)] drop-shadow-sm scale-105 inline-block'
                       : 'font-semibold text-[rgb(17_17_17_/_0.62)] hover:text-[var(--ink)]'
                   } no-underline`}
                   href={`#${link.href}`}
