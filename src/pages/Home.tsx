@@ -74,11 +74,11 @@ export default function Home() {
               </div>
               <a
                 className="absolute inset-0 grid place-items-center bg-[rgb(0_0_0_/_0.32)] text-[0.85rem] font-bold text-white opacity-0 no-underline transition-opacity duration-300 after:content-['_→'] group-hover:opacity-100"
-                href="https://github.com/Sippos/Frueher-oder-Spaeter"
+                href="https://frueher-oder-spaeter.vercel.app/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                View on GitHub
+                Visit Website
               </a>
             </article>
 
