@@ -1,4 +1,4 @@
-import { Settings, Hammer } from 'lucide-react'
+import { Settings, Hammer, Globe, Mail, Phone, MapPin } from 'lucide-react'
 import Header from '../components/Header'
 import { Link } from 'react-router-dom'
 
@@ -594,8 +594,9 @@ export default function Home() {
             Contact
           </h2>
           <address className="not-italic">
-            <ul className="flex list-none flex-wrap gap-x-4 gap-y-2">
-              <li>
+            <ul className="flex list-none flex-wrap gap-x-6 gap-y-3">
+              <li className="flex items-center gap-1.5">
+                <Mail size={16} className="text-[var(--muted)]" />
                 <a
                   className="font-semibold no-underline hover:underline"
                   href="mailto:bvlsebastian@gmail.com"
@@ -603,7 +604,8 @@ export default function Home() {
                   bvlsebastian@gmail.com
                 </a>
               </li>
-              <li>
+              <li className="flex items-center gap-1.5">
+                <Phone size={16} className="text-[var(--muted)]" />
                 <a
                   className="font-semibold no-underline hover:underline"
                   href="tel:+491774768510"
@@ -611,13 +613,39 @@ export default function Home() {
                   +49 177 4768510
                 </a>
               </li>
-              <li>Osnabrück</li>
-              <li>
+              <li className="flex items-center gap-1.5">
+                <MapPin size={16} className="text-[var(--muted)]" />
+                <span className="font-semibold">Osnabrück</span>
+              </li>
+              <li className="flex items-center gap-1.5">
+                <Globe size={16} className="text-[var(--muted)]" />
                 <a
                   className="font-semibold no-underline hover:underline"
-                  href="https://sipp.design"
+                  href="https://sippos.github.io/Resume/"
                 >
-                  sipp.design
+                  sippos.github.io/Resume
+                </a>
+              </li>
+              <li className="flex items-center gap-1.5">
+                <i className="devicon-github-original text-[16px] text-[var(--muted)]"></i>
+                <a
+                  className="font-semibold no-underline hover:underline"
+                  href="https://github.com/Sippos"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  GitHub
+                </a>
+              </li>
+              <li className="flex items-center gap-1.5">
+                <i className="devicon-linkedin-plain text-[16px] text-[var(--muted)]"></i>
+                <a
+                  className="font-semibold no-underline hover:underline"
+                  href="https://www.linkedin.com/in/sbvl/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  LinkedIn
                 </a>
               </li>
             </ul>
