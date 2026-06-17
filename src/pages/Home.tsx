@@ -614,7 +614,7 @@ export default function Home() {
           >
             Contact
           </h2>
-          <address className="not-italic">
+          <address className="not-italic flex flex-col gap-3">
             <ul className="flex list-none flex-wrap gap-x-6 gap-y-3">
               <li className="flex items-center gap-1.5">
                 <Mail size={16} className="text-[var(--muted)]" />
@@ -638,6 +638,8 @@ export default function Home() {
                 <MapPin size={16} className="text-[var(--muted)]" />
                 <span className="font-semibold">Osnabrück</span>
               </li>
+            </ul>
+            <ul className="flex list-none flex-wrap gap-x-6 gap-y-3">
               <li className="flex items-center gap-1.5">
                 <Globe size={16} className="text-[var(--muted)]" />
                 <a
