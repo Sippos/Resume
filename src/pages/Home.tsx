@@ -324,6 +324,9 @@ export default function Home() {
                 <p className="text-[0.92rem] text-[var(--muted)]">WBS Coding School</p>
                 <span className="whitespace-nowrap text-[0.92rem] text-[var(--muted)]">April – Heute</span>
               </div>
+              <p className="mt-1 text-[0.92rem] text-[var(--muted)]">
+                Skills: HTML, CSS, React, Git, JavaScript, TypeScript
+              </p>
             </li>
             <li className="grid gap-1 border-t border-[var(--soft-line)] py-4">
               <div className="flex items-baseline justify-between gap-4">
@@ -334,8 +337,14 @@ export default function Home() {
               </div>
               <div className="flex items-baseline justify-between gap-4">
                 <p className="text-[0.92rem] text-[var(--muted)]">Hochschule Osnabrück</p>
-                <span className="whitespace-nowrap text-[0.92rem] text-[var(--muted)]">8 Semester</span>
+                <div className="text-right">
+                  <span className="block whitespace-nowrap text-[0.92rem] text-[var(--muted)]">8 Semester</span>
+                  <span className="block whitespace-nowrap text-[0.92rem] text-[var(--muted)]">Okt. – Aug.</span>
+                </div>
               </div>
+              <p className="mt-1 text-[0.92rem] text-[var(--muted)]">
+                Skills: Blender, Unity, Unreal Engine, Rhinoceros 7, Adobe CC
+              </p>
               <p className="mt-1 text-[0.92rem] text-[var(--muted)]">
                 Bachelorarbeit: Ein konzeptioneller Entwurf eines Produktes zur<br />
                 Alltagsbewältigung von neurodivergenten Menschen.<br />
@@ -351,7 +360,10 @@ export default function Home() {
               </div>
               <div className="flex items-baseline justify-between gap-4">
                 <p className="text-[0.92rem] text-[var(--muted)]">Universität Osnabrück</p>
-                <span className="whitespace-nowrap text-[0.92rem] text-[var(--muted)]">6 Semester</span>
+                <div className="text-right">
+                  <span className="block whitespace-nowrap text-[0.92rem] text-[var(--muted)]">6 Semester</span>
+                  <span className="block whitespace-nowrap text-[0.92rem] text-[var(--muted)]">Okt. – Okt.</span>
+                </div>
               </div>
             </li>
             <li className="grid gap-1 border-t border-[var(--soft-line)] py-4">
@@ -363,7 +375,10 @@ export default function Home() {
               </div>
               <div className="flex items-baseline justify-between gap-4">
                 <p className="text-[0.92rem] text-[var(--muted)]">Universität Osnabrück</p>
-                <span className="whitespace-nowrap text-[0.92rem] text-[var(--muted)]">4 Semester</span>
+                <div className="text-right">
+                  <span className="block whitespace-nowrap text-[0.92rem] text-[var(--muted)]">4 Semester</span>
+                  <span className="block whitespace-nowrap text-[0.92rem] text-[var(--muted)]">Okt. – Okt.</span>
+                </div>
               </div>
             </li>
           </ul>
