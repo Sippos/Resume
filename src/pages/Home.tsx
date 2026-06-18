@@ -1,28 +1,8 @@
-import { useEffect, useRef } from 'react'
 import { Settings, Hammer, Globe, Mail, Phone, MapPin } from 'lucide-react'
 import Header from '../components/Header'
 import { Link } from 'react-router-dom'
 
 export default function Home() {
-  const clothesVideoRef = useRef<HTMLVideoElement>(null)
-
-  useEffect(() => {
-    const video = clothesVideoRef.current
-    if (!video) return
-
-    video.play().catch(() => {
-      const enableAutoplay = () => {
-        video.play()
-        document.removeEventListener('touchstart', enableAutoplay)
-        document.removeEventListener('scroll', enableAutoplay)
-        document.removeEventListener('click', enableAutoplay)
-      }
-      document.addEventListener('touchstart', enableAutoplay)
-      document.addEventListener('scroll', enableAutoplay)
-      document.addEventListener('click', enableAutoplay)
-    })
-  }, [])
-
   return (
     <div className="bg-[var(--bg)] font-['Inter',system-ui,sans-serif] text-[var(--ink)] leading-[1.45]">
       <Header />
@@ -252,17 +232,22 @@ export default function Home() {
             </article>
 
             <article className="group relative overflow-hidden bg-transparent">
-              <video
-                ref={clothesVideoRef}
-                className="block aspect-[4/3] w-full bg-[rgb(17_17_17_/_0.06)] object-contain transition duration-500 ease-out group-hover:scale-[1.025] group-hover:brightness-[0.88]"
-                src="/Resume/assets/clothes/cover.mp4"
-                autoPlay
-                muted
-                loop
-                playsInline
-                preload="metadata"
-                aria-label="Preview video for Clothes project"
-              ></video>
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: `
+                    <video
+                      class="block aspect-[4/3] w-full bg-[rgb(17_17_17_/_0.06)] object-contain transition duration-500 ease-out group-hover:scale-[1.025] group-hover:brightness-[0.88]"
+                      src="/Resume/assets/clothes/cover.mp4"
+                      autoplay
+                      muted
+                      loop
+                      playsinline
+                      preload="metadata"
+                      aria-label="Preview video for Clothes project"
+                    ></video>
+                  `
+                }}
+              />
 
               <div className="pt-3">
                 <p className="mb-1 text-[0.72rem] font-semibold tracking-[0.04em] text-[var(--muted)]">
