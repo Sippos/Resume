@@ -43,20 +43,20 @@ export default function Clothes() {
         </div>
 
         <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 md:gap-4 pb-12">
-          <video className="block aspect-[4/3] w-full bg-[rgb(17_17_17_/_0.06)] object-cover" src="assets/clothes/cover.webm" autoPlay muted loop playsInline preload="metadata"></video>
-          <video className="block aspect-[4/3] w-full bg-[rgb(17_17_17_/_0.06)] object-cover" src="assets/clothes/0001-0110.mp4" autoPlay muted loop playsInline preload="metadata"></video>
-          <video className="block aspect-[4/3] w-full bg-[rgb(17_17_17_/_0.06)] object-cover" src="assets/clothes/0001-0120 6.mp4" autoPlay muted loop playsInline preload="metadata"></video>
-          <img className="block aspect-[4/3] w-full bg-[rgb(17_17_17_/_0.06)] object-cover" src="assets/clothes/5F12DDCC-CE50-434E-987B-2E29054DCD7A.jpeg" alt="Clothes detail 3" loading="lazy" />
-          <img className="block aspect-[4/3] w-full bg-[rgb(17_17_17_/_0.06)] object-cover" src="assets/clothes/F5BE8A6B-F4A4-4A3F-B789-ED4299C614C3.jpeg" alt="Clothes detail 4" loading="lazy" />
-          <img className="block aspect-[4/3] w-full bg-[rgb(17_17_17_/_0.06)] object-cover" src="assets/clothes/IMG_3728.jpeg" alt="Clothes detail 5" loading="lazy" />
-          <img className="block aspect-[4/3] w-full bg-[rgb(17_17_17_/_0.06)] object-cover" src="assets/clothes/IMG_3729.jpeg" alt="Clothes detail 6" loading="lazy" />
-          <img className="block aspect-[4/3] w-full bg-[rgb(17_17_17_/_0.06)] object-cover" src="assets/clothes/IMG_3730.jpeg" alt="Clothes detail 7" loading="lazy" />
-          <img className="block aspect-[4/3] w-full bg-[rgb(17_17_17_/_0.06)] object-cover" src="assets/clothes/IMG_3731.jpeg" alt="Clothes detail 8" loading="lazy" />
-          <img className="block aspect-[4/3] w-full bg-[rgb(17_17_17_/_0.06)] object-cover" src="assets/clothes/IMG_3732.jpeg" alt="Clothes detail 9" loading="lazy" />
-          <video className="block aspect-[4/3] w-full bg-[rgb(17_17_17_/_0.06)] object-cover" src="assets/clothes/hoodie.mp4" autoPlay muted loop playsInline preload="metadata"></video>
-          <video className="block aspect-[4/3] w-full bg-[rgb(17_17_17_/_0.06)] object-cover" src="assets/clothes/longsleeve.mp4" autoPlay muted loop playsInline preload="metadata"></video>
-          <video className="block aspect-[4/3] w-full bg-[rgb(17_17_17_/_0.06)] object-cover" src="assets/clothes/tote_bag.mp4" autoPlay muted loop playsInline preload="metadata"></video>
-          <video className="block aspect-[4/3] w-full bg-[rgb(17_17_17_/_0.06)] object-cover" src="assets/clothes/trousers.mp4" autoPlay muted loop playsInline preload="metadata"></video>
+          <video className="block aspect-[4/3] w-full bg-[rgb(17_17_17_/_0.06)] object-cover" src="/Resume/assets/clothes/cover.webm" autoPlay muted loop playsInline preload="metadata"></video>
+          <video className="block aspect-[4/3] w-full bg-[rgb(17_17_17_/_0.06)] object-cover" src="/Resume/assets/clothes/0001-0110.mp4" autoPlay muted loop playsInline preload="metadata"></video>
+          <video className="block aspect-[4/3] w-full bg-[rgb(17_17_17_/_0.06)] object-cover" src="/Resume/assets/clothes/0001-0120 6.mp4" autoPlay muted loop playsInline preload="metadata"></video>
+          <img className="block aspect-[4/3] w-full bg-[rgb(17_17_17_/_0.06)] object-cover" src="/Resume/assets/clothes/5F12DDCC-CE50-434E-987B-2E29054DCD7A.jpeg" alt="Clothes detail 3" loading="lazy" />
+          <img className="block aspect-[4/3] w-full bg-[rgb(17_17_17_/_0.06)] object-cover" src="/Resume/assets/clothes/F5BE8A6B-F4A4-4A3F-B789-ED4299C614C3.jpeg" alt="Clothes detail 4" loading="lazy" />
+          <img className="block aspect-[4/3] w-full bg-[rgb(17_17_17_/_0.06)] object-cover" src="/Resume/assets/clothes/IMG_3728.jpeg" alt="Clothes detail 5" loading="lazy" />
+          <img className="block aspect-[4/3] w-full bg-[rgb(17_17_17_/_0.06)] object-cover" src="/Resume/assets/clothes/IMG_3729.jpeg" alt="Clothes detail 6" loading="lazy" />
+          <img className="block aspect-[4/3] w-full bg-[rgb(17_17_17_/_0.06)] object-cover" src="/Resume/assets/clothes/IMG_3730.jpeg" alt="Clothes detail 7" loading="lazy" />
+          <img className="block aspect-[4/3] w-full bg-[rgb(17_17_17_/_0.06)] object-cover" src="/Resume/assets/clothes/IMG_3731.jpeg" alt="Clothes detail 8" loading="lazy" />
+          <img className="block aspect-[4/3] w-full bg-[rgb(17_17_17_/_0.06)] object-cover" src="/Resume/assets/clothes/IMG_3732.jpeg" alt="Clothes detail 9" loading="lazy" />
+          <video className="block aspect-[4/3] w-full bg-[rgb(17_17_17_/_0.06)] object-cover" src="/Resume/assets/clothes/hoodie.mp4" autoPlay muted loop playsInline preload="metadata"></video>
+          <video className="block aspect-[4/3] w-full bg-[rgb(17_17_17_/_0.06)] object-cover" src="/Resume/assets/clothes/longsleeve.mp4" autoPlay muted loop playsInline preload="metadata"></video>
+          <video className="block aspect-[4/3] w-full bg-[rgb(17_17_17_/_0.06)] object-cover" src="/Resume/assets/clothes/tote_bag.mp4" autoPlay muted loop playsInline preload="metadata"></video>
+          <video className="block aspect-[4/3] w-full bg-[rgb(17_17_17_/_0.06)] object-cover" src="/Resume/assets/clothes/trousers.mp4" autoPlay muted loop playsInline preload="metadata"></video>
         </div>
       </main>
     </div>

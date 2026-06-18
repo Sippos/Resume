@@ -54,7 +54,7 @@ export default function Home() {
             <article className="group relative overflow-hidden bg-transparent">
               <img
                 className="block aspect-video w-full bg-[rgb(17_17_17_/_0.06)] object-cover transition duration-500 ease-out group-hover:scale-[1.025] group-hover:brightness-[0.88]"
-                src="assets/software/frueher.png"
+                src="/Resume/assets/software/frueher.png"
                 alt="Cover image for Früher oder Später"
                 loading="lazy"
               />
@@ -85,7 +85,7 @@ export default function Home() {
             <article className="group relative overflow-hidden bg-transparent">
               <img
                 className="block aspect-video w-full bg-[rgb(17_17_17_/_0.06)] object-cover transition duration-500 ease-out group-hover:scale-[1.025] group-hover:brightness-[0.88]"
-                src="assets/software/cliquebase.png"
+                src="/Resume/assets/software/cliquebase.png"
                 alt="Cover image for CliqueBase"
                 loading="lazy"
               />
@@ -139,7 +139,7 @@ export default function Home() {
             <article className="group relative overflow-hidden bg-transparent">
               <img
                 className="block aspect-[4/3] w-full bg-[rgb(17_17_17_/_0.06)] object-cover transition duration-500 ease-out group-hover:scale-[1.025] group-hover:brightness-[0.88]"
-                src="assets/DFKI_nature_robots/cover.jpg"
+                src="/Resume/assets/DFKI_nature_robots/cover.jpg"
                 alt="Cover image for Lero 2 Roboter"
                 loading="lazy"
               />
@@ -162,7 +162,7 @@ export default function Home() {
             <article className="group relative overflow-hidden bg-transparent">
               <img
                 className="block aspect-[4/3] w-full bg-[rgb(17_17_17_/_0.06)] object-cover transition duration-500 ease-out group-hover:scale-[1.025] group-hover:brightness-[0.88]"
-                src="assets/mixed-reality-model/cover.jpg"
+                src="/Resume/assets/mixed-reality-model/cover.jpg"
                 alt="Cover image for Mixed Reality Model"
                 loading="lazy"
               />
@@ -185,7 +185,7 @@ export default function Home() {
             <article className="group relative overflow-hidden bg-transparent">
               <img
                 className="block aspect-[4/3] w-full bg-[rgb(17_17_17_/_0.06)] object-cover transition duration-500 ease-out group-hover:scale-[1.025] group-hover:brightness-[0.88]"
-                src="assets/revive/cover.png"
+                src="/Resume/assets/revive/cover.png"
                 alt="Cover image for Bachelor Project"
                 loading="lazy"
               />
@@ -208,7 +208,7 @@ export default function Home() {
             <article className="group relative overflow-hidden bg-transparent">
               <img
                 className="block aspect-[4/3] w-full bg-[rgb(17_17_17_/_0.06)] object-cover transition duration-500 ease-out group-hover:scale-[1.025] group-hover:brightness-[0.88]"
-                src="assets/donda-stick/cover.png"
+                src="/Resume/assets/donda-stick/cover.png"
                 alt="Cover image for DONDA stick"
                 loading="lazy"
               />
@@ -231,7 +231,7 @@ export default function Home() {
             <article className="group relative overflow-hidden bg-transparent">
               <img
                 className="block aspect-[4/3] w-full bg-[rgb(17_17_17_/_0.06)] object-cover transition duration-500 ease-out group-hover:scale-[1.025] group-hover:brightness-[0.88]"
-                src="assets/figuren/cover.png"
+                src="/Resume/assets/figuren/cover.png"
                 alt="Cover image for Figuren"
                 loading="lazy"
               />
