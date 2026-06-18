@@ -92,6 +92,37 @@ export default function Home() {
                 View Live App
               </a>
             </article>
+
+            <article className="group relative overflow-hidden bg-transparent">
+              <img
+                className="block aspect-video w-full bg-[rgb(17_17_17_/_0.06)] object-cover transition duration-500 ease-out group-hover:scale-[1.025] group-hover:brightness-[0.88]"
+                src="/Resume/assets/software/SpriteWorkbench.png"
+                alt="Cover image for Sprite Workbench"
+                loading="lazy"
+              />
+              <div className="pt-3">
+                <div className="mb-2 flex flex-wrap gap-1.5">
+                  <span className="rounded-full border border-[var(--line)] px-2 py-0.5 text-[0.65rem] font-medium text-[rgb(17_17_17_/_0.72)] bg-[var(--bg)]">Game Tool</span>
+                  <span className="flex items-center gap-1 rounded-full border border-[var(--line)] px-2 py-0.5 text-[0.65rem] font-medium text-[rgb(17_17_17_/_0.72)] bg-[var(--bg)]"><i className="devicon-react-original colored"></i> React</span>
+                  <span className="rounded-full border border-[var(--line)] px-2 py-0.5 text-[0.65rem] font-medium text-[rgb(17_17_17_/_0.72)] bg-[var(--bg)]">Vite</span>
+                  <span className="flex items-center gap-1 rounded-full border border-[var(--line)] px-2 py-0.5 text-[0.65rem] font-medium text-[rgb(17_17_17_/_0.72)] bg-[var(--bg)]"><i className="devicon-typescript-plain colored"></i> TypeScript</span>
+                </div>
+                <h3 className="font-['Inter_Tight',system-ui,sans-serif] text-base font-bold tracking-[-0.025em]">
+                  Sprite Workbench
+                </h3>
+                <p className="mt-1 text-[0.85rem] leading-snug text-[var(--muted)]">
+                  Eine Software, um Character Spritesheets in einzelne Sprites für Game Engines zu erstellen
+                </p>
+              </div>
+              <a
+                className="absolute inset-0 grid place-items-center bg-[rgb(0_0_0_/_0.32)] text-[0.85rem] font-bold text-white opacity-0 no-underline transition-opacity duration-300 after:content-['_→'] group-hover:opacity-100"
+                href="https://github.com/Sippos/Sprite-Workbench"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View Repository
+              </a>
+            </article>
           </div>
         </section>
 
