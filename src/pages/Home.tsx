@@ -617,12 +617,6 @@ export default function Home() {
                   <i className="devicon-css3-plain colored text-lg"></i> CSS
                 </li>
                 <li className="flex items-center gap-2 rounded-full border border-[var(--line)] px-3 py-1.5 text-[0.86rem] font-medium text-[rgb(17_17_17_/_0.72)]">
-                  <i className="devicon-unity-original text-lg"></i> Unity
-                </li>
-                <li className="flex items-center gap-2 rounded-full border border-[var(--line)] px-3 py-1.5 text-[0.86rem] font-medium text-[rgb(17_17_17_/_0.72)]">
-                  <i className="devicon-unrealengine-original text-lg"></i> Unreal Engine
-                </li>
-                <li className="flex items-center gap-2 rounded-full border border-[var(--line)] px-3 py-1.5 text-[0.86rem] font-medium text-[rgb(17_17_17_/_0.72)]">
                   <i className="devicon-git-plain colored text-lg"></i> Git
                 </li>
               </ul>
@@ -635,6 +629,12 @@ export default function Home() {
               <ul className="flex list-none flex-wrap gap-2">
                 <li className="flex items-center gap-2 rounded-full border border-[var(--line)] px-3 py-1.5 text-[0.86rem] font-medium text-[rgb(17_17_17_/_0.72)]">
                   <i className="devicon-blender-original colored text-lg"></i> Blender
+                </li>
+                <li className="flex items-center gap-2 rounded-full border border-[var(--line)] px-3 py-1.5 text-[0.86rem] font-medium text-[rgb(17_17_17_/_0.72)]">
+                  <i className="devicon-unity-original text-lg"></i> Unity
+                </li>
+                <li className="flex items-center gap-2 rounded-full border border-[var(--line)] px-3 py-1.5 text-[0.86rem] font-medium text-[rgb(17_17_17_/_0.72)]">
+                  <i className="devicon-unrealengine-original text-lg"></i> Unreal Engine
                 </li>
                 <li className="flex items-center gap-2 rounded-full border border-[var(--line)] px-3 py-1.5 text-[0.86rem] font-medium text-[rgb(17_17_17_/_0.72)]">
                   Rhinoceros 7
