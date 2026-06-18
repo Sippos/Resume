@@ -130,6 +130,9 @@ export default function Home() {
                 <h3 className="font-['Inter_Tight',system-ui,sans-serif] text-base font-bold tracking-[-0.025em]">
                   Lero 2 Roboter
                 </h3>
+                <p className="mt-1 text-[0.85rem] leading-snug text-[var(--muted)]">
+                  Design- und Konstruktionsplanung eines autonomen Landwirtschaftsroboter
+                </p>
               </div>
               <Link
                 className="absolute inset-0 grid place-items-center bg-[rgb(0_0_0_/_0.32)] text-[0.85rem] font-bold text-white opacity-0 no-underline transition-opacity duration-300 after:content-['_→'] group-hover:opacity-100"
@@ -153,6 +156,9 @@ export default function Home() {
                 <h3 className="font-['Inter_Tight',system-ui,sans-serif] text-base font-bold tracking-[-0.025em]">
                   Mixed Reality Model
                 </h3>
+                <p className="mt-1 text-[0.85rem] leading-snug text-[var(--muted)]">
+                  Städtemodell Hamburgs mit 1000 3D gedruckten Gebäuden mit UI für StädteplannerInnen
+                </p>
               </div>
               <Link
                 className="absolute inset-0 grid place-items-center bg-[rgb(0_0_0_/_0.32)] text-[0.85rem] font-bold text-white opacity-0 no-underline transition-opacity duration-300 after:content-['_→'] group-hover:opacity-100"
@@ -176,6 +182,9 @@ export default function Home() {
                 <h3 className="font-['Inter_Tight',system-ui,sans-serif] text-base font-bold tracking-[-0.025em]">
                   Bachelor Project
                 </h3>
+                <p className="mt-1 text-[0.85rem] leading-snug text-[var(--muted)]">
+                  Ein Gerät zur Unterstützung von Alltagsproblemen neurodivergenter Menschen
+                </p>
               </div>
               <Link
                 className="absolute inset-0 grid place-items-center bg-[rgb(0_0_0_/_0.32)] text-[0.85rem] font-bold text-white opacity-0 no-underline transition-opacity duration-300 after:content-['_→'] group-hover:opacity-100"
@@ -199,6 +208,9 @@ export default function Home() {
                 <h3 className="font-['Inter_Tight',system-ui,sans-serif] text-base font-bold tracking-[-0.025em]">
                   DONDA stick
                 </h3>
+                <p className="mt-1 text-[0.85rem] leading-snug text-[var(--muted)]">
+                  Ein Datenträgerdesign nach dem Album DONDA
+                </p>
               </div>
               <Link
                 className="absolute inset-0 grid place-items-center bg-[rgb(0_0_0_/_0.32)] text-[0.85rem] font-bold text-white opacity-0 no-underline transition-opacity duration-300 after:content-['_→'] group-hover:opacity-100"
@@ -222,6 +234,9 @@ export default function Home() {
                 <h3 className="font-['Inter_Tight',system-ui,sans-serif] text-base font-bold tracking-[-0.025em]">
                   Figuren
                 </h3>
+                <p className="mt-1 text-[0.85rem] leading-snug text-[var(--muted)]">
+                  Meine Leidenschaft, Figuren von KünstlerInnen in 3D gestalten und drucken oder animieren
+                </p>
               </div>
               <Link
                 className="absolute inset-0 grid place-items-center bg-[rgb(0_0_0_/_0.32)] text-[0.85rem] font-bold text-white opacity-0 no-underline transition-opacity duration-300 after:content-['_→'] group-hover:opacity-100"
@@ -256,6 +271,9 @@ export default function Home() {
                 <h3 className="font-['Inter_Tight',system-ui,sans-serif] text-base font-bold tracking-[-0.025em]">
                   Clothes
                 </h3>
+                <p className="mt-1 text-[0.85rem] leading-snug text-[var(--muted)]">
+                  Klamottendesign in 3D, Schnittmustererstellung und Nähen
+                </p>
               </div>
               <Link
                 className="absolute inset-0 grid place-items-center bg-[rgb(0_0_0_/_0.32)] text-[0.85rem] font-bold text-white opacity-0 no-underline transition-opacity duration-300 after:content-['_→'] group-hover:opacity-100"
