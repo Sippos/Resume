@@ -274,7 +274,7 @@ export default function Home() {
               </div>
               <Link
                 className="absolute inset-0 grid place-items-center bg-[rgb(0_0_0_/_0.32)] text-[0.85rem] font-bold text-white opacity-0 no-underline transition-opacity duration-300 after:content-['_→'] group-hover:opacity-100"
-                to="/projects/project-06"
+                to="/clothes"
               >
                 View project
               </Link>
