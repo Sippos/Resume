@@ -355,9 +355,28 @@ export default function Home() {
                 <p className="text-[0.92rem] text-[var(--muted)]">WBS Coding School</p>
                 <span className="whitespace-nowrap text-[0.92rem] text-[var(--muted)]">April – Heute</span>
               </div>
-              <p className="mt-1 text-[0.92rem] text-[var(--muted)]">
-                Skills: HTML, CSS, React, Git, JavaScript, TypeScript
-              </p>
+              <div className="mt-4">
+                <ul className="flex list-none flex-wrap gap-2">
+                  <li className="flex items-center gap-2 rounded-full border border-[var(--line)] px-3 py-1.5 text-[0.86rem] font-medium text-[rgb(17_17_17_/_0.72)]">
+                    <i className="devicon-html5-plain colored text-lg"></i> HTML
+                  </li>
+                  <li className="flex items-center gap-2 rounded-full border border-[var(--line)] px-3 py-1.5 text-[0.86rem] font-medium text-[rgb(17_17_17_/_0.72)]">
+                    <i className="devicon-css3-plain colored text-lg"></i> CSS
+                  </li>
+                  <li className="flex items-center gap-2 rounded-full border border-[var(--line)] px-3 py-1.5 text-[0.86rem] font-medium text-[rgb(17_17_17_/_0.72)]">
+                    <i className="devicon-react-original colored text-lg"></i> React
+                  </li>
+                  <li className="flex items-center gap-2 rounded-full border border-[var(--line)] px-3 py-1.5 text-[0.86rem] font-medium text-[rgb(17_17_17_/_0.72)]">
+                    <i className="devicon-git-plain colored text-lg"></i> Git
+                  </li>
+                  <li className="flex items-center gap-2 rounded-full border border-[var(--line)] px-3 py-1.5 text-[0.86rem] font-medium text-[rgb(17_17_17_/_0.72)]">
+                    <i className="devicon-javascript-plain colored text-lg"></i> JavaScript
+                  </li>
+                  <li className="flex items-center gap-2 rounded-full border border-[var(--line)] px-3 py-1.5 text-[0.86rem] font-medium text-[rgb(17_17_17_/_0.72)]">
+                    <i className="devicon-typescript-plain colored text-lg"></i> TypeScript
+                  </li>
+                </ul>
+              </div>
             </li>
             <li className="grid gap-1 border-t border-[var(--soft-line)] py-4">
               <div className="flex items-baseline justify-between gap-4">
@@ -373,9 +392,25 @@ export default function Home() {
                   <span className="block whitespace-nowrap text-[0.92rem] text-[var(--muted)]">Okt. – Aug.</span>
                 </div>
               </div>
-              <p className="mt-1 text-[0.92rem] text-[var(--muted)]">
-                Skills: Blender, Unity, Unreal Engine, Rhinoceros 7, Adobe CC
-              </p>
+              <div className="mt-4 mb-3">
+                <ul className="flex list-none flex-wrap gap-2">
+                  <li className="flex items-center gap-2 rounded-full border border-[var(--line)] px-3 py-1.5 text-[0.86rem] font-medium text-[rgb(17_17_17_/_0.72)]">
+                    <i className="devicon-blender-original colored text-lg"></i> Blender
+                  </li>
+                  <li className="flex items-center gap-2 rounded-full border border-[var(--line)] px-3 py-1.5 text-[0.86rem] font-medium text-[rgb(17_17_17_/_0.72)]">
+                    <i className="devicon-unity-original text-lg"></i> Unity
+                  </li>
+                  <li className="flex items-center gap-2 rounded-full border border-[var(--line)] px-3 py-1.5 text-[0.86rem] font-medium text-[rgb(17_17_17_/_0.72)]">
+                    <i className="devicon-unrealengine-original text-lg"></i> Unreal Engine
+                  </li>
+                  <li className="flex items-center gap-2 rounded-full border border-[var(--line)] px-3 py-1.5 text-[0.86rem] font-medium text-[rgb(17_17_17_/_0.72)]">
+                    Rhinoceros 7
+                  </li>
+                  <li className="flex items-center gap-2 rounded-full border border-[var(--line)] px-3 py-1.5 text-[0.86rem] font-medium text-[rgb(17_17_17_/_0.72)]">
+                    <i className="devicon-illustrator-plain colored text-lg"></i> Adobe CC
+                  </li>
+                </ul>
+              </div>
               <p className="mt-1 text-[0.92rem] text-[var(--muted)]">
                 Bachelorarbeit: Ein konzeptioneller Entwurf eines Produktes zur<br />
                 Alltagsbewältigung von neurodivergenten Menschen.<br />
