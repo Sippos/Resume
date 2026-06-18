@@ -255,7 +255,7 @@ export default function Home() {
               <video
                 ref={clothesVideoRef}
                 className="block aspect-[4/3] w-full bg-[rgb(17_17_17_/_0.06)] object-contain transition duration-500 ease-out group-hover:scale-[1.025] group-hover:brightness-[0.88]"
-                src="./assets/clothes/cover.mp4"
+                src="/Resume/assets/clothes/cover.mp4"
                 autoPlay
                 muted
                 loop

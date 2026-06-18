@@ -131,7 +131,7 @@ export default function Header() {
       <header className="relative mx-auto max-w-[1240px] border-b border-[var(--line)] px-[clamp(1rem,5vw,3rem)] py-[clamp(1.5rem,4vw,3rem)] overflow-hidden md:overflow-visible">
         <video
           ref={videoRef}
-          src="assets/figuren/WebsiteIntro_bg.mp4"
+          src="/Resume/assets/figuren/WebsiteIntro_bg.mp4"
           autoPlay
           loop
           muted
