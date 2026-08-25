@@ -65,7 +65,7 @@ export default function Home() {
             <article className="group relative overflow-hidden bg-transparent">
               <img
                 className="block aspect-video w-full bg-[rgb(17_17_17_/_0.06)] object-cover transition duration-500 ease-out group-hover:scale-[1.025] group-hover:brightness-[0.88]"
-                src="/Resume/assets/software/cliquebase.png"
+                src="/Resume/assets/software/CliqueBase.png"
                 alt="Cover image for CliqueBase"
                 loading="lazy"
               />
