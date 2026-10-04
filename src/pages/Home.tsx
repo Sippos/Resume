@@ -191,14 +191,17 @@ export default function Home() {
               />
               <div className="pt-3">
                 <div className="mb-2 flex flex-wrap gap-1.5">
-                  <span className="rounded-full border border-[var(--line)] px-2 py-0.5 text-[0.65rem] font-medium text-[rgb(17_17_17_/_0.72)] bg-[var(--bg)]">Web App</span>
+                  <span className="rounded-full border border-[var(--line)] px-2 py-0.5 text-[0.65rem] font-medium text-[rgb(17_17_17_/_0.72)] bg-[var(--bg)]">Full Stack</span>
+                  <span className="flex items-center gap-1 rounded-full border border-[var(--line)] px-2 py-0.5 text-[0.65rem] font-medium text-[rgb(17_17_17_/_0.72)] bg-[var(--bg)]"><i className="devicon-typescript-plain colored"></i> TypeScript</span>
                   <span className="flex items-center gap-1 rounded-full border border-[var(--line)] px-2 py-0.5 text-[0.65rem] font-medium text-[rgb(17_17_17_/_0.72)] bg-[var(--bg)]"><i className="devicon-react-original colored"></i> React</span>
+                  <span className="flex items-center gap-1 rounded-full border border-[var(--line)] px-2 py-0.5 text-[0.65rem] font-medium text-[rgb(17_17_17_/_0.72)] bg-[var(--bg)]"><i className="devicon-nodejs-plain colored"></i> Node.js</span>
+                  <span className="flex items-center gap-1 rounded-full border border-[var(--line)] px-2 py-0.5 text-[0.65rem] font-medium text-[rgb(17_17_17_/_0.72)] bg-[var(--bg)]"><i className="devicon-mongodb-plain colored"></i> MongoDB</span>
                 </div>
                 <h3 className="font-['Inter_Tight',system-ui,sans-serif] text-base font-bold tracking-[-0.025em]">
                   Nihomi
                 </h3>
                 <p className="mt-1 text-[0.85rem] leading-snug text-[var(--muted)]">
-                  Eine Japanisch Lernplattform mit Gamificationelementen
+                  Full-Stack-Lernplattform für Japanisch mit interaktiver Zeichen-Canvas (Strichfolgen-Engine), Spaced Repetition (SRS), Cookie-JWT-Auth und automatisierter linguistischer Datenpipeline (Kuromoji, DeepL, KANJIDIC2).
                 </p>
               </div>
               <a
@@ -609,13 +612,19 @@ export default function Home() {
               </h3>
               <ul className="flex list-none flex-wrap gap-2">
                 <li className="rounded-full border border-[var(--line)] px-3 py-1.5 text-[0.86rem] font-medium text-[rgb(17_17_17_/_0.72)]">
-                  Frontend Development
+                  Full Stack Development
+                </li>
+                <li className="rounded-full border border-[var(--line)] px-3 py-1.5 text-[0.86rem] font-medium text-[rgb(17_17_17_/_0.72)]">
+                  REST APIs & Backend
+                </li>
+                <li className="rounded-full border border-[var(--line)] px-3 py-1.5 text-[0.86rem] font-medium text-[rgb(17_17_17_/_0.72)]">
+                  Database Architecture (MongoDB / SQL)
+                </li>
+                <li className="rounded-full border border-[var(--line)] px-3 py-1.5 text-[0.86rem] font-medium text-[rgb(17_17_17_/_0.72)]">
+                  Data Pipelines & Ingestion
                 </li>
                 <li className="rounded-full border border-[var(--line)] px-3 py-1.5 text-[0.86rem] font-medium text-[rgb(17_17_17_/_0.72)]">
                   Version Control (Git)
-                </li>
-                <li className="rounded-full border border-[var(--line)] px-3 py-1.5 text-[0.86rem] font-medium text-[rgb(17_17_17_/_0.72)]">
-                  Web Development
                 </li>
                 <li className="rounded-full border border-[var(--line)] px-3 py-1.5 text-[0.86rem] font-medium text-[rgb(17_17_17_/_0.72)]">
                   Agile / Scrum
@@ -696,6 +705,18 @@ export default function Home() {
                 </li>
                 <li className="flex items-center gap-2 rounded-full border border-[var(--line)] px-3 py-1.5 text-[0.86rem] font-medium text-[rgb(17_17_17_/_0.72)]">
                   <i className="devicon-react-original colored text-lg"></i> React
+                </li>
+                <li className="flex items-center gap-2 rounded-full border border-[var(--line)] px-3 py-1.5 text-[0.86rem] font-medium text-[rgb(17_17_17_/_0.72)]">
+                  <i className="devicon-nodejs-plain colored text-lg"></i> Node.js
+                </li>
+                <li className="flex items-center gap-2 rounded-full border border-[var(--line)] px-3 py-1.5 text-[0.86rem] font-medium text-[rgb(17_17_17_/_0.72)]">
+                  <i className="devicon-express-original text-lg"></i> Express
+                </li>
+                <li className="flex items-center gap-2 rounded-full border border-[var(--line)] px-3 py-1.5 text-[0.86rem] font-medium text-[rgb(17_17_17_/_0.72)]">
+                  <i className="devicon-mongodb-plain colored text-lg"></i> MongoDB
+                </li>
+                <li className="flex items-center gap-2 rounded-full border border-[var(--line)] px-3 py-1.5 text-[0.86rem] font-medium text-[rgb(17_17_17_/_0.72)]">
+                  <i className="devicon-tailwindcss-original colored text-lg"></i> Tailwind CSS
                 </li>
                 <li className="flex items-center gap-2 rounded-full border border-[var(--line)] px-3 py-1.5 text-[0.86rem] font-medium text-[rgb(17_17_17_/_0.72)]">
                   <i className="devicon-html5-plain colored text-lg"></i> HTML
