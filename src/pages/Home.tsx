@@ -40,16 +40,17 @@ export default function Home() {
               />
               <div className="pt-3">
                 <div className="mb-2 flex flex-wrap gap-1.5">
-                  <span className="rounded-full border border-[var(--line)] px-2 py-0.5 text-[0.65rem] font-medium text-[rgb(17_17_17_/_0.72)] bg-[var(--bg)]">Card Game</span>
+                  <span className="rounded-full border border-[var(--line)] px-2 py-0.5 text-[0.65rem] font-medium text-[rgb(17_17_17_/_0.72)] bg-[var(--bg)]">Full Stack</span>
+                  <span className="flex items-center gap-1 rounded-full border border-[var(--line)] px-2 py-0.5 text-[0.65rem] font-medium text-[rgb(17_17_17_/_0.72)] bg-[var(--bg)]"><i className="devicon-typescript-plain colored"></i> TypeScript</span>
                   <span className="flex items-center gap-1 rounded-full border border-[var(--line)] px-2 py-0.5 text-[0.65rem] font-medium text-[rgb(17_17_17_/_0.72)] bg-[var(--bg)]"><i className="devicon-react-original colored"></i> React</span>
-                  <span className="rounded-full border border-[var(--line)] px-2 py-0.5 text-[0.65rem] font-medium text-[rgb(17_17_17_/_0.72)] bg-[var(--bg)]">Vite</span>
-                  <span className="rounded-full border border-[var(--line)] px-2 py-0.5 text-[0.65rem] font-medium text-[rgb(17_17_17_/_0.72)] bg-[var(--bg)]">Phaser</span>
+                  <span className="flex items-center gap-1 rounded-full border border-[var(--line)] px-2 py-0.5 text-[0.65rem] font-medium text-[rgb(17_17_17_/_0.72)] bg-[var(--bg)]"><i className="devicon-socketio-original colored"></i> Socket.IO</span>
+                  <span className="flex items-center gap-1 rounded-full border border-[var(--line)] px-2 py-0.5 text-[0.65rem] font-medium text-[rgb(17_17_17_/_0.72)] bg-[var(--bg)]"><i className="devicon-express-original"></i> Express</span>
                 </div>
                 <h3 className="font-['Inter_Tight',system-ui,sans-serif] text-base font-bold tracking-[-0.025em]">
                   Früher oder Später
                 </h3>
                 <p className="mt-1 text-[0.85rem] leading-snug text-[var(--muted)]">
-                  Ein Online-Kartenspiel über Prokrastination mit 2 Player Local Co-Op.
+                  Echtzeit-Multiplayer-Kartenspiel über Prokrastination mit Raum-Code-Lobby, autoritativem Socket.IO-Backend, State-Sanitizer (Fog of War) und deterministischer Game-State-Machine.
                 </p>
               </div>
               <a
@@ -71,16 +72,17 @@ export default function Home() {
               />
               <div className="pt-3">
                 <div className="mb-2 flex flex-wrap gap-1.5">
-                  <span className="rounded-full border border-[var(--line)] px-2 py-0.5 text-[0.65rem] font-medium text-[rgb(17_17_17_/_0.72)] bg-[var(--bg)]">Community Database</span>
+                  <span className="rounded-full border border-[var(--line)] px-2 py-0.5 text-[0.65rem] font-medium text-[rgb(17_17_17_/_0.72)] bg-[var(--bg)]">Full Stack</span>
                   <span className="flex items-center gap-1 rounded-full border border-[var(--line)] px-2 py-0.5 text-[0.65rem] font-medium text-[rgb(17_17_17_/_0.72)] bg-[var(--bg)]"><i className="devicon-react-original colored"></i> React</span>
-                  <span className="rounded-full border border-[var(--line)] px-2 py-0.5 text-[0.65rem] font-medium text-[rgb(17_17_17_/_0.72)] bg-[var(--bg)]">Supabase</span>
-                  <span className="rounded-full border border-[var(--line)] px-2 py-0.5 text-[0.65rem] font-medium text-[rgb(17_17_17_/_0.72)] bg-[var(--bg)]">Vercel</span>
+                  <span className="flex items-center gap-1 rounded-full border border-[var(--line)] px-2 py-0.5 text-[0.65rem] font-medium text-[rgb(17_17_17_/_0.72)] bg-[var(--bg)]"><i className="devicon-supabase-plain colored"></i> Supabase</span>
+                  <span className="flex items-center gap-1 rounded-full border border-[var(--line)] px-2 py-0.5 text-[0.65rem] font-medium text-[rgb(17_17_17_/_0.72)] bg-[var(--bg)]"><i className="devicon-postgresql-plain colored"></i> PostgreSQL</span>
+                  <span className="flex items-center gap-1 rounded-full border border-[var(--line)] px-2 py-0.5 text-[0.65rem] font-medium text-[rgb(17_17_17_/_0.72)] bg-[var(--bg)]"><i className="devicon-tailwindcss-original colored"></i> Tailwind CSS</span>
                 </div>
                 <h3 className="font-['Inter_Tight',system-ui,sans-serif] text-base font-bold tracking-[-0.025em]">
                   CliqueBase
                 </h3>
                 <p className="mt-1 text-[0.85rem] leading-snug text-[var(--muted)]">
-                  Eine Datenbank für die Auslagerung von Gruppenchats - füge Filme, Videos, Bücher als Vorschläge in deiner Clique hinzu
+                  Kollaborative Medien-Plattform für Freundesgruppen mit Supabase/PostgreSQL (RLS, Auth), TMDB-API-Integration, Gruppen-Entscheidungs-Engine (Tinder-Swipe-Deck, Tonight Mode) und Community-Governance.
                 </p>
               </div>
               <a
@@ -102,16 +104,18 @@ export default function Home() {
               />
               <div className="pt-3">
                 <div className="mb-2 flex flex-wrap gap-1.5">
-                  <span className="rounded-full border border-[var(--line)] px-2 py-0.5 text-[0.65rem] font-medium text-[rgb(17_17_17_/_0.72)] bg-[var(--bg)]">Game Tool</span>
-                  <span className="flex items-center gap-1 rounded-full border border-[var(--line)] px-2 py-0.5 text-[0.65rem] font-medium text-[rgb(17_17_17_/_0.72)] bg-[var(--bg)]"><i className="devicon-react-original colored"></i> React</span>
-                  <span className="rounded-full border border-[var(--line)] px-2 py-0.5 text-[0.65rem] font-medium text-[rgb(17_17_17_/_0.72)] bg-[var(--bg)]">Vite</span>
+                  <span className="rounded-full border border-[var(--line)] px-2 py-0.5 text-[0.65rem] font-medium text-[rgb(17_17_17_/_0.72)] bg-[var(--bg)]">Game Dev Tool</span>
                   <span className="flex items-center gap-1 rounded-full border border-[var(--line)] px-2 py-0.5 text-[0.65rem] font-medium text-[rgb(17_17_17_/_0.72)] bg-[var(--bg)]"><i className="devicon-typescript-plain colored"></i> TypeScript</span>
+                  <span className="flex items-center gap-1 rounded-full border border-[var(--line)] px-2 py-0.5 text-[0.65rem] font-medium text-[rgb(17_17_17_/_0.72)] bg-[var(--bg)]"><i className="devicon-react-original colored"></i> React</span>
+                  <span className="rounded-full border border-[var(--line)] px-2 py-0.5 text-[0.65rem] font-medium text-[rgb(17_17_17_/_0.72)] bg-[var(--bg)]">Zustand</span>
+                  <span className="rounded-full border border-[var(--line)] px-2 py-0.5 text-[0.65rem] font-medium text-[rgb(17_17_17_/_0.72)] bg-[var(--bg)]">Canvas API</span>
+                  <span className="rounded-full border border-[var(--line)] px-2 py-0.5 text-[0.65rem] font-medium text-[rgb(17_17_17_/_0.72)] bg-[var(--bg)]">Tauri</span>
                 </div>
                 <h3 className="font-['Inter_Tight',system-ui,sans-serif] text-base font-bold tracking-[-0.025em]">
                   Sprite Workbench
                 </h3>
                 <p className="mt-1 text-[0.85rem] leading-snug text-[var(--muted)]">
-                  Eine Software, um Character Spritesheets in einzelne Sprites für Game Engines zu erstellen
+                  Desktop- & Web-Tool für Game-Devs mit Zustand-Architektur, pixelgenauen Canvas-Chroma-Keying-Algorithmen, Frame-Normalisierung, Pivot/Collision-Guides und Multi-Engine-Export.
                 </p>
               </div>
               <a
@@ -133,13 +137,18 @@ export default function Home() {
               />
               <div className="pt-3">
                 <div className="mb-2 flex flex-wrap gap-1.5">
-                  <span className="rounded-full border border-[var(--line)] px-2 py-0.5 text-[0.65rem] font-medium text-[rgb(17_17_17_/_0.72)] bg-[var(--bg)]">Audio Tool</span>
+                  <span className="rounded-full border border-[var(--line)] px-2 py-0.5 text-[0.65rem] font-medium text-[rgb(17_17_17_/_0.72)] bg-[var(--bg)]">Audio & ML</span>
+                  <span className="flex items-center gap-1 rounded-full border border-[var(--line)] px-2 py-0.5 text-[0.65rem] font-medium text-[rgb(17_17_17_/_0.72)] bg-[var(--bg)]"><i className="devicon-python-plain colored"></i> Python</span>
+                  <span className="flex items-center gap-1 rounded-full border border-[var(--line)] px-2 py-0.5 text-[0.65rem] font-medium text-[rgb(17_17_17_/_0.72)] bg-[var(--bg)]"><i className="devicon-fastapi-plain colored"></i> FastAPI</span>
+                  <span className="rounded-full border border-[var(--line)] px-2 py-0.5 text-[0.65rem] font-medium text-[rgb(17_17_17_/_0.72)] bg-[var(--bg)]">TensorFlow.js</span>
+                  <span className="rounded-full border border-[var(--line)] px-2 py-0.5 text-[0.65rem] font-medium text-[rgb(17_17_17_/_0.72)] bg-[var(--bg)]">Web Audio API</span>
+                  <span className="rounded-full border border-[var(--line)] px-2 py-0.5 text-[0.65rem] font-medium text-[rgb(17_17_17_/_0.72)] bg-[var(--bg)]">Tone.js</span>
                 </div>
                 <h3 className="font-['Inter_Tight',system-ui,sans-serif] text-base font-bold tracking-[-0.025em]">
                   Musip
                 </h3>
                 <p className="mt-1 text-[0.85rem] leading-snug text-[var(--muted)]">
-                  Eine Musiksoftware, um MIDIs aus Sample und Musik zu erstellen und nachzubauen
+                  KI-Audio-Workstation mit In-Browser Polyphonic Pitch Detection (Spotify Basic Pitch / TensorFlow.js), Meta Demucs Neural Stem Separation (FastAPI / PyTorch), Tone.js und interaktivem Piano Roll.
                 </p>
               </div>
               <a
@@ -161,15 +170,17 @@ export default function Home() {
               />
               <div className="pt-3">
                 <div className="mb-2 flex flex-wrap gap-1.5">
-                  <span className="rounded-full border border-[var(--line)] px-2 py-0.5 text-[0.65rem] font-medium text-[rgb(17_17_17_/_0.72)] bg-[var(--bg)]">Game</span>
-                  <span className="rounded-full border border-[var(--line)] px-2 py-0.5 text-[0.65rem] font-medium text-[rgb(17_17_17_/_0.72)] bg-[var(--bg)]">API</span>
+                  <span className="rounded-full border border-[var(--line)] px-2 py-0.5 text-[0.65rem] font-medium text-[rgb(17_17_17_/_0.72)] bg-[var(--bg)]">Roguelite Game</span>
+                  <span className="flex items-center gap-1 rounded-full border border-[var(--line)] px-2 py-0.5 text-[0.65rem] font-medium text-[rgb(17_17_17_/_0.72)] bg-[var(--bg)]"><i className="devicon-typescript-plain colored"></i> TypeScript</span>
                   <span className="flex items-center gap-1 rounded-full border border-[var(--line)] px-2 py-0.5 text-[0.65rem] font-medium text-[rgb(17_17_17_/_0.72)] bg-[var(--bg)]"><i className="devicon-react-original colored"></i> React</span>
+                  <span className="rounded-full border border-[var(--line)] px-2 py-0.5 text-[0.65rem] font-medium text-[rgb(17_17_17_/_0.72)] bg-[var(--bg)]">REST API</span>
+                  <span className="rounded-full border border-[var(--line)] px-2 py-0.5 text-[0.65rem] font-medium text-[rgb(17_17_17_/_0.72)] bg-[var(--bg)]">Procedural DAG</span>
                 </div>
                 <h3 className="font-['Inter_Tight',system-ui,sans-serif] text-base font-bold tracking-[-0.025em]">
                   Poke Roguelite/Autobattler
                 </h3>
                 <p className="mt-1 text-[0.85rem] leading-snug text-[var(--muted)]">
-                  Ein Pokemon API Roguelite / Autobattler mit Overworld Wegfindung, Items, Rerolls und Trainerfights
+                  Roguelite-Autobattler mit prozeduralem Branching-Map-Generator (DAG), PokéAPI-Anbindung, typenbasierter Kampfsimulations-Engine, Inventarsystem und JWT-Auth/Leaderboard.
                 </p>
               </div>
               <a
@@ -618,10 +629,16 @@ export default function Home() {
                   REST APIs & Backend
                 </li>
                 <li className="rounded-full border border-[var(--line)] px-3 py-1.5 text-[0.86rem] font-medium text-[rgb(17_17_17_/_0.72)]">
-                  Database Architecture (MongoDB / SQL)
+                  Database Architecture (MongoDB / SQL / Supabase)
                 </li>
                 <li className="rounded-full border border-[var(--line)] px-3 py-1.5 text-[0.86rem] font-medium text-[rgb(17_17_17_/_0.72)]">
                   Data Pipelines & Ingestion
+                </li>
+                <li className="rounded-full border border-[var(--line)] px-3 py-1.5 text-[0.86rem] font-medium text-[rgb(17_17_17_/_0.72)]">
+                  Real-Time & WebSockets (Socket.IO)
+                </li>
+                <li className="rounded-full border border-[var(--line)] px-3 py-1.5 text-[0.86rem] font-medium text-[rgb(17_17_17_/_0.72)]">
+                  Audio ML & Canvas Image Processing
                 </li>
                 <li className="rounded-full border border-[var(--line)] px-3 py-1.5 text-[0.86rem] font-medium text-[rgb(17_17_17_/_0.72)]">
                   Version Control (Git)
@@ -713,7 +730,22 @@ export default function Home() {
                   <i className="devicon-express-original text-lg"></i> Express
                 </li>
                 <li className="flex items-center gap-2 rounded-full border border-[var(--line)] px-3 py-1.5 text-[0.86rem] font-medium text-[rgb(17_17_17_/_0.72)]">
+                  <i className="devicon-python-plain colored text-lg"></i> Python
+                </li>
+                <li className="flex items-center gap-2 rounded-full border border-[var(--line)] px-3 py-1.5 text-[0.86rem] font-medium text-[rgb(17_17_17_/_0.72)]">
+                  <i className="devicon-fastapi-plain colored text-lg"></i> FastAPI
+                </li>
+                <li className="flex items-center gap-2 rounded-full border border-[var(--line)] px-3 py-1.5 text-[0.86rem] font-medium text-[rgb(17_17_17_/_0.72)]">
                   <i className="devicon-mongodb-plain colored text-lg"></i> MongoDB
+                </li>
+                <li className="flex items-center gap-2 rounded-full border border-[var(--line)] px-3 py-1.5 text-[0.86rem] font-medium text-[rgb(17_17_17_/_0.72)]">
+                  <i className="devicon-supabase-plain colored text-lg"></i> Supabase
+                </li>
+                <li className="flex items-center gap-2 rounded-full border border-[var(--line)] px-3 py-1.5 text-[0.86rem] font-medium text-[rgb(17_17_17_/_0.72)]">
+                  <i className="devicon-postgresql-plain colored text-lg"></i> PostgreSQL
+                </li>
+                <li className="flex items-center gap-2 rounded-full border border-[var(--line)] px-3 py-1.5 text-[0.86rem] font-medium text-[rgb(17_17_17_/_0.72)]">
+                  <i className="devicon-socketio-original text-lg"></i> Socket.IO
                 </li>
                 <li className="flex items-center gap-2 rounded-full border border-[var(--line)] px-3 py-1.5 text-[0.86rem] font-medium text-[rgb(17_17_17_/_0.72)]">
                   <i className="devicon-tailwindcss-original colored text-lg"></i> Tailwind CSS
