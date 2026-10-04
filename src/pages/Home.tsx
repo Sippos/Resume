@@ -424,12 +424,11 @@ export default function Home() {
           >
             Über mich
           </h2>
-          <p className="max-w-[70ch] text-[rgb(17_17_17_/_0.7)]">
-            Industriedesigner mit ersten Erfahrungen in Agenturarbeit und
-            Startup-Umgebung. Begeistert von Innovationen, Technologien und deren
-            Potenzial, das Leben von Menschen zu verbessern. Mit Stärke im
-            Designprozess von User Journeys, Research, Ideation, Ideenentwicklung
-            und 3D-Modellierung.
+          <p className="max-w-[70ch] text-[rgb(17_17_17_/_0.7)] leading-relaxed">
+            Als Industriedesigner mit Startup- und Agenturerfahrung verbinde ich nutzerzentriertes Systemdenken,
+            User Research und Interface-Design mit moderner Full-Stack-Softwareentwicklung (TypeScript, React, Node.js).
+            Mein Anspruch ist es, nicht nur intuitive User Journeys zu gestalten, sondern die technische
+            Architektur und den performanten Code dahinter direkt selbst umzusetzen – ganzheitlich von der Idee bis zum Deployment.
           </p>
         </section>
 
@@ -448,7 +447,7 @@ export default function Home() {
             <li className="grid gap-1 border-t border-[var(--soft-line)] py-4 first:border-t-0 first:pt-0">
               <div className="flex items-baseline justify-between gap-4">
                 <h3 className="font-['Inter_Tight',system-ui,sans-serif] text-base font-bold">
-                  KI Softwareentwicklung
+                  KI Softwareentwicklung &amp; KI Kompakt
                 </h3>
                 <span className="whitespace-nowrap text-[0.92rem] font-medium">2026–Heute</span>
               </div>
@@ -456,33 +455,66 @@ export default function Home() {
                 <p className="text-[0.92rem] text-[var(--muted)]">WBS Coding School</p>
                 <span className="whitespace-nowrap text-[0.92rem] text-[var(--muted)]">April – Heute</span>
               </div>
-              <div className="mt-4">
+              <div className="mt-4 mb-3">
                 <ul className="flex list-none flex-wrap gap-2">
                   <li className="flex items-center gap-2 rounded-full border border-[var(--line)] px-3 py-1.5 text-[0.86rem] font-medium text-[rgb(17_17_17_/_0.72)]">
-                    <i className="devicon-html5-plain colored text-lg"></i> HTML
-                  </li>
-                  <li className="flex items-center gap-2 rounded-full border border-[var(--line)] px-3 py-1.5 text-[0.86rem] font-medium text-[rgb(17_17_17_/_0.72)]">
-                    <i className="devicon-css3-plain colored text-lg"></i> CSS
+                    <i className="devicon-typescript-plain colored text-lg"></i> TypeScript
                   </li>
                   <li className="flex items-center gap-2 rounded-full border border-[var(--line)] px-3 py-1.5 text-[0.86rem] font-medium text-[rgb(17_17_17_/_0.72)]">
                     <i className="devicon-react-original colored text-lg"></i> React
                   </li>
                   <li className="flex items-center gap-2 rounded-full border border-[var(--line)] px-3 py-1.5 text-[0.86rem] font-medium text-[rgb(17_17_17_/_0.72)]">
+                    <i className="devicon-nodejs-plain colored text-lg"></i> Node.js
+                  </li>
+                  <li className="flex items-center gap-2 rounded-full border border-[var(--line)] px-3 py-1.5 text-[0.86rem] font-medium text-[rgb(17_17_17_/_0.72)]">
+                    <i className="devicon-express-original text-lg"></i> Express
+                  </li>
+                  <li className="flex items-center gap-2 rounded-full border border-[var(--line)] px-3 py-1.5 text-[0.86rem] font-medium text-[rgb(17_17_17_/_0.72)]">
+                    <i className="devicon-postgresql-plain colored text-lg"></i> PostgreSQL
+                  </li>
+                  <li className="flex items-center gap-2 rounded-full border border-[var(--line)] px-3 py-1.5 text-[0.86rem] font-medium text-[rgb(17_17_17_/_0.72)]">
+                    <i className="devicon-supabase-plain colored text-lg"></i> Supabase
+                  </li>
+                  <li className="flex items-center gap-2 rounded-full border border-[var(--line)] px-3 py-1.5 text-[0.86rem] font-medium text-[rgb(17_17_17_/_0.72)]">
+                    <i className="devicon-mongodb-plain colored text-lg"></i> MongoDB
+                  </li>
+                  <li className="flex items-center gap-2 rounded-full border border-[var(--line)] px-3 py-1.5 text-[0.86rem] font-medium text-[rgb(17_17_17_/_0.72)]">
+                    <i className="devicon-tailwindcss-original colored text-lg"></i> Tailwind CSS
+                  </li>
+                  <li className="flex items-center gap-2 rounded-full border border-[var(--line)] px-3 py-1.5 text-[0.86rem] font-medium text-[rgb(17_17_17_/_0.72)]">
                     <i className="devicon-git-plain colored text-lg"></i> Git
-                  </li>
-                  <li className="flex items-center gap-2 rounded-full border border-[var(--line)] px-3 py-1.5 text-[0.86rem] font-medium text-[rgb(17_17_17_/_0.72)]">
-                    <i className="devicon-javascript-plain colored text-lg"></i> JavaScript
-                  </li>
-                  <li className="flex items-center gap-2 rounded-full border border-[var(--line)] px-3 py-1.5 text-[0.86rem] font-medium text-[rgb(17_17_17_/_0.72)]">
-                    <i className="devicon-typescript-plain colored text-lg"></i> TypeScript
                   </li>
                 </ul>
               </div>
+              <p className="mt-1 text-[0.92rem] text-[var(--muted)]">
+                Intensive 17-wöchige Vollzeit-Weiterbildung (637 Unterrichtsstunden) in moderner Full-Stack-Softwareentwicklung und agiler Teamarbeit (Scrum, Git-Workflows).
+              </p>
+              <p className="mt-1 text-[0.92rem] text-[var(--muted)]">
+                Schwerpunkte: Frontend-Architektur mit React 19 und TypeScript, Backend-Services mit Node.js &amp; Express, RESTful APIs, Zod-Validierung sowie relationale und NoSQL-Datenbanken (PostgreSQL/Supabase mit RLS, MongoDB).
+              </p>
+              <p className="mt-1 text-[0.92rem] text-[var(--muted)]">
+                Nahtlose Weiterführung in der Fachvertiefung „KI Kompakt“ (09/2026–10/2026): Autonome Multi-Agenten-Systeme, Prompt Engineering und KI-gestützte Workflow-Automatisierung.
+              </p>
             </li>
             <li className="grid gap-1 border-t border-[var(--soft-line)] py-4">
               <div className="flex items-baseline justify-between gap-4">
                 <h3 className="font-['Inter_Tight',system-ui,sans-serif] text-base font-bold">
-                  Industrial Design
+                  Berufliche Neuorientierung &amp; Autodidaktik
+                </h3>
+                <span className="whitespace-nowrap text-[0.92rem] font-medium">2024–2026</span>
+              </div>
+              <div className="flex items-baseline justify-between gap-4">
+                <p className="text-[0.92rem] text-[var(--muted)]">Osnabrück</p>
+                <span className="whitespace-nowrap text-[0.92rem] text-[var(--muted)]">Aug. – Apr.</span>
+              </div>
+              <p className="mt-1 text-[0.92rem] text-[var(--muted)]">
+                Gezielte Vertiefung in technologische Trends und interaktive Prototypentwicklung: Autonome Agenten-Workflows, Prompt Engineering, Vibe Coding, ComfyUI sowie Spiel- und Logik-Entwicklung.
+              </p>
+            </li>
+            <li className="grid gap-1 border-t border-[var(--soft-line)] py-4">
+              <div className="flex items-baseline justify-between gap-4">
+                <h3 className="font-['Inter_Tight',system-ui,sans-serif] text-base font-bold">
+                  Industrial Design (B.A.)
                 </h3>
                 <span className="whitespace-nowrap text-[0.92rem] font-medium">2020–2024</span>
               </div>
@@ -510,18 +542,22 @@ export default function Home() {
                   <li className="flex items-center gap-2 rounded-full border border-[var(--line)] px-3 py-1.5 text-[0.86rem] font-medium text-[rgb(17_17_17_/_0.72)]">
                     <i className="devicon-illustrator-plain colored text-lg"></i> Adobe CC
                   </li>
+                  <li className="flex items-center gap-2 rounded-full border border-[var(--line)] px-3 py-1.5 text-[0.86rem] font-medium text-[rgb(17_17_17_/_0.72)]">
+                    <i className="devicon-figma-plain colored text-lg"></i> Figma
+                  </li>
                 </ul>
               </div>
               <p className="mt-1 text-[0.92rem] text-[var(--muted)]">
-                Bachelorarbeit: Ein konzeptioneller Entwurf eines Produktes zur<br />
-                Alltagsbewältigung von neurodivergenten Menschen.<br />
-                Note: 1,5
+                Ganzheitliche Produktentwicklung und nutzerzentrierte Konzeption. Schwerpunkte: UI/UX, User Research, Ergonomie, Design Thinking und 3D-CAD-Modellierung.
+              </p>
+              <p className="mt-1 text-[0.92rem] text-[var(--muted)]">
+                Bachelorarbeit: Ein konzeptioneller Entwurf eines Produkts und Assistenzsystems zur Alltagsbewältigung von neurodivergenten Menschen (Note: 1,5).
               </p>
             </li>
             <li className="grid gap-1 border-t border-[var(--soft-line)] py-4">
               <div className="flex items-baseline justify-between gap-4">
                 <h3 className="font-['Inter_Tight',system-ui,sans-serif] text-base font-bold">
-                  Germanistik & Geschichte
+                  Germanistik &amp; Geschichte
                 </h3>
                 <span className="whitespace-nowrap text-[0.92rem] font-medium">2016–2019</span>
               </div>
@@ -532,6 +568,9 @@ export default function Home() {
                   <span className="block whitespace-nowrap text-[0.92rem] text-[var(--muted)]">Okt. – Okt.</span>
                 </div>
               </div>
+              <p className="mt-1 text-[0.92rem] text-[var(--muted)]">
+                Schwerpunkte auf analytischem Textverständnis, strukturierter Wissensvermittlung und präziser Kommunikation.
+              </p>
             </li>
             <li className="grid gap-1 border-t border-[var(--soft-line)] py-4">
               <div className="flex items-baseline justify-between gap-4">
@@ -547,6 +586,9 @@ export default function Home() {
                   <span className="block whitespace-nowrap text-[0.92rem] text-[var(--muted)]">Okt. – Okt.</span>
                 </div>
               </div>
+              <p className="mt-1 text-[0.92rem] text-[var(--muted)]">
+                Schulung analytischer Methodik und systematischer Durchdringung hochkomplexer, hierarchischer Regelwerke.
+              </p>
             </li>
           </ul>
         </section>
