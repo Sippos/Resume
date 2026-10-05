@@ -98,6 +98,38 @@ export default function Home() {
             <article className="group relative overflow-hidden bg-transparent">
               <img
                 className="block aspect-video w-full bg-[rgb(17_17_17_/_0.06)] object-cover transition duration-500 ease-out group-hover:scale-[1.025] group-hover:brightness-[0.88]"
+                src="/Resume/assets/software/minewars.png"
+                alt="Cover image for MineWars"
+                loading="lazy"
+              />
+              <div className="pt-3">
+                <div className="mb-2 flex flex-wrap gap-1.5">
+                  <span className="rounded-full border border-[var(--line)] px-2 py-0.5 text-[0.65rem] font-medium text-[rgb(17_17_17_/_0.72)] bg-[var(--bg)]">Game Dev</span>
+                  <span className="flex items-center gap-1 rounded-full border border-[var(--line)] px-2 py-0.5 text-[0.65rem] font-medium text-[rgb(17_17_17_/_0.72)] bg-[var(--bg)]"><i className="devicon-godot-plain colored"></i> Godot 4</span>
+                  <span className="rounded-full border border-[var(--line)] px-2 py-0.5 text-[0.65rem] font-medium text-[rgb(17_17_17_/_0.72)] bg-[var(--bg)]">GDScript</span>
+                  <span className="rounded-full border border-[var(--line)] px-2 py-0.5 text-[0.65rem] font-medium text-[rgb(17_17_17_/_0.72)] bg-[var(--bg)]">State Machine</span>
+                  <span className="rounded-full border border-[var(--line)] px-2 py-0.5 text-[0.65rem] font-medium text-[rgb(17_17_17_/_0.72)] bg-[var(--bg)]">Co-Op & Versus</span>
+                </div>
+                <h3 className="font-['Inter_Tight',system-ui,sans-serif] text-base font-bold tracking-[-0.025em]">
+                  MineWars
+                </h3>
+                <p className="mt-1 text-[0.85rem] leading-snug text-[var(--muted)]">
+                  Warcraft III Hero Line Wars-inspiriertes Mining- & Strategy-Game in Godot 4. Strategischer Stollenbau, 6 asymmetrische Helden mit Fähigkeitsbäumen, dynamisches Creep-Routing, Basen-Upgrades und 1v1-Versus-Ökonomie.
+                </p>
+              </div>
+              <a
+                className="absolute inset-0 grid place-items-center bg-[rgb(0_0_0_/_0.32)] text-[0.85rem] font-bold text-white opacity-0 no-underline transition-opacity duration-300 after:content-['_→'] group-hover:opacity-100"
+                href="https://sippos.itch.io/minewars"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Play on itch.io
+              </a>
+            </article>
+
+            <article className="group relative overflow-hidden bg-transparent">
+              <img
+                className="block aspect-video w-full bg-[rgb(17_17_17_/_0.06)] object-cover transition duration-500 ease-out group-hover:scale-[1.025] group-hover:brightness-[0.88]"
                 src="/Resume/assets/software/SpriteWorkbench.png"
                 alt="Cover image for Sprite Workbench"
                 loading="lazy"
@@ -683,6 +715,9 @@ export default function Home() {
                   Audio ML & Canvas Image Processing
                 </li>
                 <li className="rounded-full border border-[var(--line)] px-3 py-1.5 text-[0.86rem] font-medium text-[rgb(17_17_17_/_0.72)]">
+                  Game Development & State Machines (Godot / GDScript)
+                </li>
+                <li className="rounded-full border border-[var(--line)] px-3 py-1.5 text-[0.86rem] font-medium text-[rgb(17_17_17_/_0.72)]">
                   Version Control (Git)
                 </li>
                 <li className="rounded-full border border-[var(--line)] px-3 py-1.5 text-[0.86rem] font-medium text-[rgb(17_17_17_/_0.72)]">
@@ -811,6 +846,9 @@ export default function Home() {
               <ul className="flex list-none flex-wrap gap-2">
                 <li className="flex items-center gap-2 rounded-full border border-[var(--line)] px-3 py-1.5 text-[0.86rem] font-medium text-[rgb(17_17_17_/_0.72)]">
                   <i className="devicon-blender-original colored text-lg"></i> Blender
+                </li>
+                <li className="flex items-center gap-2 rounded-full border border-[var(--line)] px-3 py-1.5 text-[0.86rem] font-medium text-[rgb(17_17_17_/_0.72)]">
+                  <i className="devicon-godot-plain colored text-lg"></i> Godot 4
                 </li>
                 <li className="flex items-center gap-2 rounded-full border border-[var(--line)] px-3 py-1.5 text-[0.86rem] font-medium text-[rgb(17_17_17_/_0.72)]">
                   <i className="devicon-unity-original text-lg"></i> Unity
