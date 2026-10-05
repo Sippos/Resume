@@ -479,13 +479,50 @@ export default function Home() {
             <li className="grid gap-1 border-t border-[var(--soft-line)] py-4 first:border-t-0 first:pt-0">
               <div className="flex items-baseline justify-between gap-4">
                 <h3 className="font-['Inter_Tight',system-ui,sans-serif] text-base font-bold">
-                  KI Softwareentwicklung &amp; KI Kompakt
+                  KI Kompakt (Teilzeit)
                 </h3>
                 <span className="whitespace-nowrap text-[0.92rem] font-medium">2026–Heute</span>
               </div>
               <div className="flex items-baseline justify-between gap-4">
                 <p className="text-[0.92rem] text-[var(--muted)]">WBS Coding School</p>
-                <span className="whitespace-nowrap text-[0.92rem] text-[var(--muted)]">April – Heute</span>
+                <div className="text-right">
+                  <span className="block whitespace-nowrap text-[0.92rem] text-[var(--muted)]">laufend</span>
+                  <span className="block whitespace-nowrap text-[0.92rem] text-[var(--muted)]">Sept. – Okt.</span>
+                </div>
+              </div>
+              <div className="mt-4 mb-3">
+                <ul className="flex list-none flex-wrap gap-2">
+                  <li className="flex items-center gap-2 rounded-full border border-[var(--line)] px-3 py-1.5 text-[0.86rem] font-medium text-[rgb(17_17_17_/_0.72)]">
+                    Autonome KI-Agenten
+                  </li>
+                  <li className="flex items-center gap-2 rounded-full border border-[var(--line)] px-3 py-1.5 text-[0.86rem] font-medium text-[rgb(17_17_17_/_0.72)]">
+                    Multi-Agenten-Workflows
+                  </li>
+                  <li className="flex items-center gap-2 rounded-full border border-[var(--line)] px-3 py-1.5 text-[0.86rem] font-medium text-[rgb(17_17_17_/_0.72)]">
+                    Prompt Engineering
+                  </li>
+                  <li className="flex items-center gap-2 rounded-full border border-[var(--line)] px-3 py-1.5 text-[0.86rem] font-medium text-[rgb(17_17_17_/_0.72)]">
+                    Workflow-Automatisierung
+                  </li>
+                </ul>
+              </div>
+              <p className="mt-1 text-[0.92rem] text-[var(--muted)]">
+                Fachvertiefung mit Schwerpunkt auf autonomen Multi-Agenten-Systemen, Toolchains, Prompt-Architekturen und KI-gestützter Workflow-Automatisierung.
+              </p>
+            </li>
+            <li className="grid gap-1 border-t border-[var(--soft-line)] py-4">
+              <div className="flex items-baseline justify-between gap-4">
+                <h3 className="font-['Inter_Tight',system-ui,sans-serif] text-base font-bold">
+                  KI-Softwareentwicklung (Vollzeit)
+                </h3>
+                <span className="whitespace-nowrap text-[0.92rem] font-medium">2026</span>
+              </div>
+              <div className="flex items-baseline justify-between gap-4">
+                <p className="text-[0.92rem] text-[var(--muted)]">WBS Coding School</p>
+                <div className="text-right">
+                  <span className="block whitespace-nowrap text-[0.92rem] text-[var(--muted)]">Zertifizierter Abschluss</span>
+                  <span className="block whitespace-nowrap text-[0.92rem] text-[var(--muted)]">April – Aug.</span>
+                </div>
               </div>
               <div className="mt-4 mb-3">
                 <ul className="flex list-none flex-wrap gap-2">
@@ -519,13 +556,10 @@ export default function Home() {
                 </ul>
               </div>
               <p className="mt-1 text-[0.92rem] text-[var(--muted)]">
-                Intensive 17-wöchige Vollzeit-Weiterbildung (637 Unterrichtsstunden) in moderner Full-Stack-Softwareentwicklung und agiler Teamarbeit (Scrum, Git-Workflows).
+                Intensive 17-wöchige Vollzeit-Weiterbildung in moderner Full-Stack-Softwareentwicklung und agiler Teamarbeit (Scrum, Git-Workflows).
               </p>
               <p className="mt-1 text-[0.92rem] text-[var(--muted)]">
                 Schwerpunkte: Frontend-Architektur mit React 19 und TypeScript, Backend-Services mit Node.js &amp; Express, RESTful APIs, Zod-Validierung sowie relationale und NoSQL-Datenbanken (PostgreSQL/Supabase mit RLS, MongoDB).
-              </p>
-              <p className="mt-1 text-[0.92rem] text-[var(--muted)]">
-                Nahtlose Weiterführung in der Fachvertiefung „KI Kompakt“ (09/2026–10/2026): Autonome Multi-Agenten-Systeme, Prompt Engineering und KI-gestützte Workflow-Automatisierung.
               </p>
             </li>
             <li className="grid gap-1 border-t border-[var(--soft-line)] py-4">
@@ -583,7 +617,7 @@ export default function Home() {
                 Ganzheitliche Produktentwicklung und nutzerzentrierte Konzeption. Schwerpunkte: UI/UX, User Research, Ergonomie, Design Thinking und 3D-CAD-Modellierung.
               </p>
               <p className="mt-1 text-[0.92rem] text-[var(--muted)]">
-                Bachelorarbeit: Ein konzeptioneller Entwurf eines Produkts und Assistenzsystems zur Alltagsbewältigung von neurodivergenten Menschen (Note: 1,5).
+                Bachelorarbeit: Ein konzeptioneller Entwurf eines Produkts und Assistenzsystems zur Alltagsbewältigung von neurodivergenten Menschen.
               </p>
             </li>
             <li className="grid gap-1 border-t border-[var(--soft-line)] py-4">
